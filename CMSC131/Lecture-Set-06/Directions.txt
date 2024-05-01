@@ -1,0 +1,9 @@
+For each the statements in
+	FirstClass and then in MainClass
+	determine if that statement is 
+		(a) valid
+		(b) invalid or
+		(c) valid but not recommended
+	
+	Then uncomment it, see if you were correct,
+	and be able to explain why it has the choice above.
