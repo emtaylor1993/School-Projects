@@ -1,0 +1,237 @@
+LAB 5, 10/04/13
+________________
+
+
+1. 	Two-dimensional arrays (or matrices) are handled much in the same way
+	as one-dimensional arrays (or vectors).  If
+
+	A	is an arbitrary matrix and
+
+	I, J 	are (one-dimensional) index vectors, 
+
+	then
+		
+	A(I,J)	is a matrix of size 
+
+		length(I) x length(J), 
+	whose 		
+		(i,j)th entry = (I(i),J(j))th entry of A
+
+	Replacing either I or J by a colon (:) yields all applicable indices, 
+	i.e., (all rows or columns) in increasing order without repetition.
+
+
+	Examples:
+
+		A = 1:20;             % row vector for time being
+
+		A = reshape(A,4,5)    % application of RESHAPE function
+                              % new matrix is filled column-by-column
+
+		A([1 2], [3 4 5])
+
+		A(1:3, 4:-1:2)
+
+		A(:, 3)
+
+		A(:, [3 3])           % repetitions allowed
+
+		p = [2 3 5 4 1];      % permutation of 1:5
+
+		A(:, p)               % column permutation
+
+		A(p, :)               % error
+
+		q = [2 3 4 1];        % permutation of 1:4
+
+		A(q, :)               % row permutation
+
+
+2.	As we saw earlier, 
+
+		A*B = matrix product between two compatible matrices (i.e.,
+		      A is m-by-p and B is p-by-n)
+
+		A.*B = array product betwen two arrays of the same size
+
+	If B is a square matrix, then B*B and B.*B are in general different.
+
+	Example:
+
+		B = reshape(1:9,3,3)
+
+		B*B
+
+		B.*B
+
+		B*B == B.*B		% relational operator ("is equal")
+
+
+	If c is a scalar (1*1), e.g.,
+        
+        c = 5; %then
+
+		c*B  % is the same as c.*B
+
+		c+B  % adds c to each element of B
+
+
+3.	Handy matrices:
+
+		ONES(M,N)        matrix of 1s of size MxN
+
+		ZEROS(M,N)       matrix of 0s (of size MxN)
+
+		RAND(M,N)        random entries, values ranging from 0 to 1
+
+		EYE(N)           NxN identity matrix
+
+		DIAG(VECTOR)     returns a diagonal (and square) matrix with
+                         VECTOR on its main diagonal
+
+		DIAG(SQ_MATRIX)  returns the diagonal (in form of a vector)
+                         of a square matrix
+
+	Examples:
+
+		U = ones(3,3)
+
+		Z = zeros(3,3)
+
+		5.^Z - U		% explain the result
+
+		R = rand(size(U))
+
+		2*R-1			% random entries from -1 to 1
+
+		R == R.'		% why is this a very likely result?
+
+		ans - eye(3)
+
+		v = diag(R)
+
+		diag(v)
+
+
+4.	We have seen examples of MATLAB graphics in the context of 2-D plots.
+	MATLAB has extensive capabilities that extend to 3-D plots, images,
+	video, etc.  The structure and representation of all graphics in MATLAB
+	are based on matrices.  Here, we explore one basic connection between 
+	graphics and matrices.
+
+	For simplicity, we will consider matrices with entries between 0 and 1.
+	The function 
+
+		IMSHOW(MATRIX)
+
+	where MATRIX has dimensions MxN, displays the entries of the matrix as
+	an MxN grayscale image, where the the intensity of the (i,j)th pixel is
+	given by the (i,j)th entry of MATRIX - with 0 corresponding to black
+	and 1 corresponding to white.
+
+		m = 100;
+
+		U = ones(m,m);
+
+		imshow(U)
+
+		H = 0.5*U; imshow(H)
+
+		Z = 0*U; imshow(Z)
+
+		E = eye(m); imshow(E)
+
+		imshow(0.5*E + 0.5*U)		% all values in [0.5,1]
+
+		R = rand(m,m); imshow(R)
+
+		imshow(0.5*E + 0.5*R)		% all values still in [0,1]
+
+	(MATLAB also uses the color map feature to represent different shades 
+	of gray by different colors. A menu of preset color maps can be accessed 
+	on the figure window through EDIT > FIGURE PROPERTIES.)
+
+
+5.	Explain the form of the images generated below:
+
+		m = 200;
+
+		a = 0 : 1/m : 1;
+
+		u = ones(size(a));
+
+		X = u.'*a;
+
+		Y = a.'*u;
+
+			imshow(X)
+
+			imshow(Y)
+
+			imshow(X>Y)
+
+			imshow(X.^2<Y)
+
+		C = (cos((X+Y-1)*pi/2)).^6 ;
+
+			imshow(C)
+
+		F = a.'*a ;		% what is an equivalent formula for F?
+
+			imshow((1-F).^6)
+		
+
+6.	Similarly, a grayscale digital image can be represented by a single
+	matrix. (Color images require three matrices, one each for the
+	intensities of the constituent colors Red, Green and Blue).  MATLAB 
+	can read most image file types.
+
+	The array cameraman contains the intensity values of a 512x512
+	grayscale image:
+
+		A = imread('cameraman.tif');
+
+		subplot(2,1,1), imshow(A)
+
+	Some standard image transformations, performed on A:
+
+		A1 = A(60:190, 170:300);      % zooming in
+		
+		subplot(2,1,2), imshow(A1)			
+
+		A2 = rot90(A,1);	      % counterclockwise rotation
+                                  % 1: 90 deg, 2: 180 deg, etc.
+			imshow(A2)	
+
+			imshow(fliplr(A))     % left-to-right flip
+
+			imshow(flipud(A))     % upside-down flip
+
+			imshow(A.')           % transposition
+
+		A3 = circshift(A,256) ;	  % circular shift; 256=512/2,
+                                  % so top, bottom halves swapped
+			imshow(A3)
+
+		A4 = (circshift(A3.',256)).'; % explain the result
+	
+			imshow(A4)
+
+		A5 = A>120;               % conversion to B&W (no gray)
+
+			imshow(A5)
+
+		A6 = double(A).^0.8;      % darkens image
+
+		imshow(A6)                % does not work, since A6 is of type
+                                  % double, pixel values will be capped at 
+                                  % 1.0, and thus its range of display will 
+                                  % be 0--1.
+
+		imshow(uint8(A6))         % works for integers, range of dispay
+                                  % is 0--255.
+
+		A7 = double(A).^1.05;     % brightens image
+
+		imshow(uint8(A7))
+
