@@ -1,0 +1,47 @@
+<!--
+ * EMPLOYEE FORM
+ *
+ * @author Emmanuel Taylor
+ * @author Kwaku Addow
+ * @author So Ra Jang
+ * @author Leonard Tangban
+ * @author Keith Maina
+ *
+ * @description
+ *    View for the Employee Form
+-->
+
+<html>
+    <head>
+        <link th:href="@{/stylesheet.css}" rel="stylesheet" type="text/css">
+        <title>Employees</title>
+    </head>
+    <body>
+        <div class="topnav">
+            <a th:href="@{/}">Dashboard</a>
+            <a th:href="@{/employees}">Employee List</a>
+            <a style="float:right;" th:href="@{/logout}">Logout</a>
+        </div> 
+        <div class="container">
+            <h2>Add Employee Record</h2>
+            <form method="post" th:object="${employee}" th:action="@{/submitEmployee}">
+                <input type="text" placeholder="First Name" th:field="*{firstName}">
+                <p style="color:red" th:errors="*{firstName}"></p>
+                <input type="text" placeholder="Last Name" th:field="*{lastName}">
+                <p style="color:red" th:errors="*{lastName}"></p>            
+                <input type="text" placeholder="Role" th:field="*{role}"> 
+                <p style="color:red" th:errors="*{role}"></p>
+                <input type="text" placeholder="Email" th:field="*{email}">
+                <p style="color:red" th:errors="*{email}"></p>
+                <input type="text" placeholder="Salary" th:field="*{salary}">
+                <p style="color:red" th:errors="*{salary}"></p>
+                <input type="text" placeholder="Username" th:field="*{username}">
+                <p style="color:red" th:errors="*{username}"></p>
+                <input type="password" placeholder="Password" th:field="*{password}">
+                <p style="color:red" th:errors="*{password}"></p>
+                <br><br>
+                <input type="submit" value="Add Employee">
+            </form>
+        </div>
+    </body>
+</html>

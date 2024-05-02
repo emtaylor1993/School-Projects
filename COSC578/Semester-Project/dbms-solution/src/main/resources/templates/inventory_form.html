@@ -1,0 +1,49 @@
+<!--
+ * INVENTORY FORM
+ *
+ * @author Emmanuel Taylor
+ * @author Kwaku Addow
+ * @author So Ra Jang
+ * @author Leonard Tangban
+ * @author Keith Maina
+ *
+ * @description
+ *    View for the Inventory Form
+-->
+
+<html>
+    <head>
+        <link th:href="@{/stylesheet.css}" rel="stylesheet" type="text/css">
+        <title>Inventory</title>
+    </head>
+    <body>
+        <div class="topnav">
+            <a th:href="@{/}">Dashboard</a>
+            <a th:href="@{/inventory}">Inventory List</a>
+            <a style="float:right;" th:href="@{/logout}">Logout</a>
+        </div> 
+        <div class="container">
+            <h2>Add / Edit Inventory Record</h2>
+            <form method="post" th:object="${inventory}" th:action="@{/submitInventory}">
+                <input type="text" placeholder="Description" th:field="*{description}">
+                <p style="color:red" th:errors="*{description}"></p>
+                <input type="text" placeholder="Date" th:field="*{date}">
+                <p style="color:red" th:errors="*{date}"></p>            
+                <input type="text" placeholder="Job Name" th:field="*{jobName}"> 
+                <p style="color:red" th:errors="*{jobName}"></p>
+                <input type="text" placeholder="Job ID" th:field="*{jobId}">
+                <p style="color:red" th:errors="*{jobId}"></p>
+                <input type="text" placeholder="Part Name" th:field="*{partName}">
+                <p style="color:red" th:errors="*{partName}"></p>
+                <input type="text" placeholder="Quantity" th:field="*{quantity}">
+                <p style="color:red" th:errors="*{quantity}"></p>
+                <input type="text" placeholder="Vendor" th:field="*{vendor}">
+                <p style="color:red" th:errors="*{vendor}"></p>
+                <input type="text" placeholder="Employee ID" th:field="*{employee.employeeId}">
+                <p style="color:red" th:errors="*{employee.employeeId}"></p>
+                <br><br>
+                <input type="submit" value="Add Part">
+            </form>
+        </div>
+    </body>
+</html>

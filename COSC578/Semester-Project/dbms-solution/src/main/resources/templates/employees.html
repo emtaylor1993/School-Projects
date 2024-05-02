@@ -1,0 +1,55 @@
+<!--
+ * EMPLOYEES
+ *
+ * @author Emmanuel Taylor
+ * @author Kwaku Addow
+ * @author So Ra Jang
+ * @author Leonard Tangban
+ * @author Keith Maina
+ *
+ * @description
+ *    View for the Employees
+-->
+
+<html>
+  <head> 
+    <title>Employees</title>
+    <link th:href="@{/view_stylesheet.css}" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="topnav">
+      <a th:href="@{/}">Dashboard</a>
+      <a style="float:right;" th:href="@{/logout}">Logout</a>
+    </div>
+    <div class="container">
+      <h2>Employee Directory</h2>
+      <table id="table"> 
+        <tr>
+          <th>Employee ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Role</th>
+          <th>Email</th>
+          <th>Salary</th>
+          <th>Username</th>
+          <th style="text-align:center; color:green;">✔</th>
+          <th style="text-align:center; color:red;">✘</th>
+        </tr>
+        <tr th:each="employee: ${employees}">
+            <td th:text="${#numbers.formatInteger(employee.employeeId, 5)}"></td>
+            <td th:text="${employee.firstName}"></td>
+            <td th:text="${employee.lastName}"></td>
+            <td th:text="${employee.role}"></td>
+            <td th:text="${employee.email}"></td>
+            <td th:text="${#numbers.formatCurrency(employee.salary)}"></td>
+            <td th:text="${employee.username}"></td>
+            <td><a style="text-align:center; text-decoration:none;" role="button" class="delete" th:href="@{/employee_form/(employeeId = ${employee.employeeId})}">Update</a></td>
+            <td><a style="text-align:center; text-decoration:none;" role="button" class="delete" th:href="@{/deleteEmployee/(employeeId = ${employee.employeeId})}">Delete</a></td>
+          </tr>
+      </table>
+      <br><br>
+      <button type="button" style="width:45%; float:left;" th:onclick="|window.location.href='/employee_form'|">Add Employee</button>
+      <button type="button" class="profile" style="width:45%; float:right;" th:onclick="|window.location.href='/employee_search'|">Search Employees</button>
+    </div>
+  </body>
+</html>

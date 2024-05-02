@@ -1,0 +1,47 @@
+<!--
+ * CHANGE ORDER FORM
+ *
+ * @author Emmanuel Taylor
+ * @author Kwaku Addow
+ * @author So Ra Jang
+ * @author Leonard Tangban
+ * @author Keith Maina
+ *
+ * @description
+ *    View for the Change Order Form
+-->
+
+<html>
+    <head>
+        <link th:href="@{/stylesheet.css}" rel="stylesheet" type="text/css">
+        <title>Change Orders</title>
+    </head>
+    <body>
+        <div class="topnav">
+            <a th:href="@{/}">Dashboard</a>
+            <a th:href="@{/change_orders}">Change Orders</a>
+            <a style="float:right;" th:href="@{/logout}">Logout</a>
+        </div> 
+        <div class="container">
+            <h2>Add / Edit Change Order Record</h2>
+            <form method="post" th:object="${changeOrder}" th:action="@{/submitChangeOrder}">
+                <input type="text" placeholder="Description" th:field="*{description}">
+                <p style="color:red" th:errors="*{description}"></p>
+                <input type="text" placeholder="Date" th:field="*{date}">
+                <p style="color:red" th:errors="*{date}"></p>            
+                <input type="text" placeholder="Job Name" th:field="*{jobName}"> 
+                <p style="color:red" th:errors="*{jobName}"></p>
+                <input type="text" placeholder="Job ID" th:field="*{jobId}">
+                <p style="color:red" th:errors="*{jobId}"></p>
+                <input type="text" placeholder="Change Date" th:field="*{changeDate}">
+                <p style="color:red" th:errors="*{changeDate}"></p>
+                <input type="text" placeholder="Days Added" th:field="*{daysAdded}">
+                <p style="color:red" th:errors="*{daysAdded}"></p>
+                <input type="text" placeholder="Employee ID" th:field="*{employee.employeeId}">
+                <p style="color:red" th:errors="*{employee.employeeId}"></p>
+                <br><br>
+                <input type="submit" value="Add Change Order">
+            </form>
+        </div>
+    </body>
+</html>

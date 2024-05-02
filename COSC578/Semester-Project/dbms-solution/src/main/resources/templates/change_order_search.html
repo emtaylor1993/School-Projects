@@ -1,0 +1,53 @@
+<!--
+ * CHANGE ORDER SEARCH
+ *
+ * @author Emmanuel Taylor
+ * @author Kwaku Addow
+ * @author So Ra Jang
+ * @author Leonard Tangban
+ * @author Keith Maina
+ *
+ * @description
+ *    View for the Change Order Search Menu
+-->
+
+<html>
+    <head>
+        <link th:href="@{/stylesheet.css}" rel="stylesheet" type="text/css">
+        <title>Change Order Search</title>
+        <script>
+            function searchByEmployee() {
+                selectedElement = document.querySelector('#username');
+                window.location.assign("/change_order_results/?username=" + selectedElement.value);
+            }
+            function clearList() {
+                var x = document.getElementById("username");
+                var listLength = x.length;
+                for (var i = 0; i < listLength; i++) {
+                  for (var j = 0; j < listLength; j++) {
+                    if (x.options[i].value == x.options[j].value && i != j) {
+                      x.remove(j);
+                      listLength--;
+                    }
+                  }
+                }
+              }
+        </script>
+    </head>
+    <body onLoad="clearList()">
+        <div class="topnav">
+            <a th:href="@{/}">Dashboard</a>
+            <a th:href="@{/change_orders}">Change Orders</a>
+            <a style="float:right;" th:href="@{/logout}">Logout</a>
+        </div> 
+        <div class="container">
+            <h2>Search Change Orders By Employee</h2>
+            <select name="username" id="username">
+                <option value="none" selected disabled hidden>Select an Option</option>
+                <option th:each="co: ${changeOrders}" th:value="${co.employee.username}" th:text="${co.employee.username}"></option>
+            </select>
+            <br><br>
+            <button type="button" class="profile" style="width:45%;" th:onclick="searchByEmployee()">Search</button>
+        </div>
+    </body>
+</html>

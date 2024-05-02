@@ -1,0 +1,43 @@
+<!--
+ * DASHBOARD
+ *
+ * @author Emmanuel Taylor
+ * @author Kwaku Addow
+ * @author So Ra Jang
+ * @author Leonard Tangban
+ * @author Keith Maina
+ *
+ * @description
+ *    View for the Dashboard
+-->
+
+<html>
+    <head>
+        <link th:href="@{/stylesheet.css}" rel="stylesheet" type="text/css">
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <div class="topnav">
+            <h2 th:inline="text" style="text-align:center;">Welcome, [[${#httpServletRequest.remoteUser}]]!</h2>
+        </div>
+        <div class="container">
+            <div th:if="${param.logout}">
+                <h2>You have been logged out.</h2>
+            </div>
+            <h2>Dashboard</h2>
+            <form method="post">
+                <button type="button" th:onclick="|window.location.href='/employees'|">View Employees</button>
+                <br><br>
+                <button type="button" th:onclick="|window.location.href='/financial_data'|">View Financial Data</button>
+                <br><br>
+                <button type="button" th:onclick="|window.location.href='/change_orders'|">View Change Orders</button>
+                <br><br>
+                <button type="button" th:onclick="|window.location.href='/purchase_orders'|">View Purchase Orders</button>
+                <br><br>
+                <button type="button" th:onclick="|window.location.href='/inventory'|">View Inventory</button>
+                <br><br><br><br>
+                <button type="button" th:onclick="|window.location.href='/logout'|" class="logout">Log Out</button>
+            </form>
+        </div>
+    </body>
+</html>

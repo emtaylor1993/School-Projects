@@ -1,0 +1,50 @@
+<!--
+ * EMPLOYEE SEARCH RESULTS
+ *
+ * @author Emmanuel Taylor
+ * @author Kwaku Addow
+ * @author So Ra Jang
+ * @author Leonard Tangban
+ * @author Keith Maina
+ *
+ * @description
+ *    View for the Employee Search Results
+-->
+
+<html>
+  <head> 
+    <title>Search Results</title>
+    <link th:href="@{/view_stylesheet.css}" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="topnav">
+      <a th:href="@{/}">Dashboard</a>
+      <a style="float:right;" th:href="@{/logout}">Logout</a>
+    </div>
+    <div class="container">
+      <h2>Search Results</h2>
+      <table id="table"> 
+        <tr>
+          <th>Employee ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Role</th>
+          <th>Email</th>
+          <th>Salary</th>
+          <th>Username</th>
+        </tr>
+        <tr th:each="result: ${results}">
+            <td th:text="${#numbers.formatInteger(result.employeeId, 5)}"></td>
+            <td th:text="${result.firstName}"></td>
+            <td th:text="${result.lastName}"></td>
+            <td th:text="${result.role}"></td>
+            <td th:text="${result.email}"></td>
+            <td th:text="${#numbers.formatCurrency(result.salary)}"></td>
+            <td th:text="${result.username}"></td>
+          </tr>
+      </table>
+      <br><br>
+      <button type="button" style="width:45%;" th:onclick="|window.location.href='/employee_search'|">Back to Search</button>
+    </div>
+  </body>
+</html>

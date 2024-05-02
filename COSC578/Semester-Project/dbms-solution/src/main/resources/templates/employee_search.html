@@ -1,0 +1,43 @@
+<!--
+ * EMPLOYEE SEARCH
+ *
+ * @author Emmanuel Taylor
+ * @author Kwaku Addow
+ * @author So Ra Jang
+ * @author Leonard Tangban
+ * @author Keith Maina
+ *
+ * @description
+ *    View for the Employee Search Menu
+-->
+
+<html>
+    <head>
+        <link th:href="@{/stylesheet.css}" rel="stylesheet" type="text/css">
+        <title>Employee Search</title>
+        <script>
+            function searchByRole() {
+                selectedElement = document.querySelector('#roles');
+                window.location.assign("/employee_results/?role=" + selectedElement.value);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="topnav">
+            <a th:href="@{/}">Dashboard</a>
+            <a th:href="@{/employees}">Employee List</a>
+            <a style="float:right;" th:href="@{/logout}">Logout</a>
+        </div> 
+        <div class="container">
+            <h2>Search Employees By Role</h2>
+            <select name="roles" id="roles">
+                <option value="none" selected disabled hidden>Select an Option</option> 
+                <option value="Administrator">Administrator</option>
+                <option value="Accountant">Accountant</option>
+                <option value="Program Manager">Program Manager</option>
+            </select>
+            <br><br>
+            <button type="button" class="profile" style="width:45%;" th:onclick="searchByRole()">Search</button>
+        </div>
+    </body>
+</html>

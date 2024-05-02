@@ -1,0 +1,43 @@
+<!--
+ * FINANCIAL DATA FORM
+ *
+ * @author Emmanuel Taylor
+ * @author Kwaku Addow
+ * @author So Ra Jang
+ * @author Leonard Tangban
+ * @author Keith Maina
+ *
+ * @description
+ *    View for the Financial Data Form
+-->
+
+<html>
+    <head>
+        <link th:href="@{/stylesheet.css}" rel="stylesheet" type="text/css">
+        <title>Financial Data</title>
+    </head>
+    <body>
+        <div class="topnav">
+            <a th:href="@{/}">Dashboard</a>
+            <a th:href="@{/financial_data}">Financial Data</a>
+            <a style="float:right;" th:href="@{/logout}">Logout</a>
+        </div> 
+        <div class="container">
+            <h2>Add / Edit Financial Data Record</h2>
+            <form method="post" th:object="${financialData}" th:action="@{/submitFinancialData}">
+                <input type="text" placeholder="Description" th:field="*{description}">
+                <p style="color:red" th:errors="*{description}"></p>
+                <input type="text" placeholder="Date" th:field="*{date}">
+                <p style="color:red" th:errors="*{date}"></p>            
+                <input type="text" placeholder="Category" th:field="*{category}"> 
+                <p style="color:red" th:errors="*{category}"></p>
+                <input type="text" placeholder="Amount" th:field="*{amount}">
+                <p style="color:red" th:errors="*{amount}"></p>
+                <input type="text" placeholder="Employee ID" th:field="*{employee.employeeId}">
+                <p style="color:red" th:errors="*{employee.employeeId}"></p>
+                <br><br>
+                <input type="submit" value="Add Financial Data Record">
+            </form>
+        </div>
+    </body>
+</html>

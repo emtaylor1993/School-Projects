@@ -1,0 +1,29 @@
+<!--
+ * ACCESS DENIED
+ *
+ * @author Emmanuel Taylor
+ * @author Kwaku Addow
+ * @author So Ra Jang
+ * @author Leonard Tangban
+ * @author Keith Maina
+ *
+ * @description
+ *    View for Custom Access Denied Page
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <link th:href="@{/stylesheet.css}" rel="stylesheet" type="text/css">
+        <title>Access Denied</title>
+    </head>
+    <body>
+        <div class="topnav">
+            <h2 th:inline="text" style="text-align:center; color:#ff4d4d;">403: ACCESS DENIED</h2>
+        </div>
+        <div class="container">
+            <img src="https://cdn-icons-png.flaticon.com/512/4676/4676082.png" style="max-width: 50%; max-height: 50%;">
+            <h2 style="color:#ff4d4d; font-size: 29px;">You do not have access to this resource.</h2>
+            <button type="button" th:onclick="|window.location.href='/'|">Back to Dashboard</button>
+        </div>
+    </body>
+</html>
