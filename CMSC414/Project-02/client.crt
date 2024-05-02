@@ -1,0 +1,62 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4098 (0x1002)
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=US, ST=Maryland, L=CollegePark, O=UMD, OU=CE, CN=Emmanuel/emailAddress=etaylor5@umd.edu
+        Validity
+            Not Before: Oct 17 20:40:50 2014 GMT
+            Not After : Oct 17 20:40:50 2015 GMT
+        Subject: C=US, ST=Maryland, L=CollegePark, O=UMD, OU=CE, CN=PKILabServer.com/emailAddress=etaylor5@umd.edu
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (1024 bit)
+                Modulus (1024 bit):
+                    00:9f:4e:88:0b:c1:e4:b1:6b:b0:57:0b:ac:50:9c:
+                    05:c9:9a:46:fb:84:e4:6f:bc:22:90:b3:4e:f2:69:
+                    04:02:f3:52:f0:dc:ae:d2:42:7c:c9:ac:45:5b:ae:
+                    87:a0:91:8c:7a:6d:c2:2e:7d:da:e2:69:c1:09:dc:
+                    32:9f:f6:dd:9a:8f:12:0c:56:81:9e:05:6c:f9:70:
+                    3e:b6:66:2e:54:68:96:21:06:01:74:b3:36:5b:43:
+                    12:e9:ee:34:77:40:2d:3c:48:ff:a9:af:c4:77:77:
+                    2f:6a:9a:60:fc:6e:0a:32:e2:8b:fc:e0:98:72:cd:
+                    38:22:70:e0:e6:2e:48:75:8d
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                C5:08:1A:A7:B9:F7:FC:B6:2D:A3:4D:43:28:65:6A:99:3C:50:FF:82
+            X509v3 Authority Key Identifier: 
+                keyid:C3:BE:85:80:DB:B4:D8:7E:B0:B3:96:80:C5:26:6D:2C:76:B1:73:DE
+
+    Signature Algorithm: sha1WithRSAEncryption
+        62:80:d8:b3:80:fe:e3:a5:dd:29:5c:74:9b:bf:f7:43:6e:37:
+        fb:3d:85:68:13:38:dd:03:07:3e:39:36:94:ae:eb:4d:a6:1f:
+        f1:d5:4c:c1:cb:6a:77:cc:e2:0e:59:f9:1a:c8:a8:4e:13:25:
+        12:b0:9c:1f:73:53:53:21:62:d8:45:d1:5d:e4:04:61:2f:03:
+        e6:0a:af:19:55:e3:ec:74:fb:d3:9a:cd:ea:09:84:49:e3:b0:
+        6a:3c:c5:c1:5f:73:58:16:ac:64:ac:f0:39:8a:71:1a:0d:f0:
+        1e:76:e9:12:7d:9d:b4:c4:53:65:66:38:00:b0:5a:51:d6:ec:
+        af:e2
+-----BEGIN CERTIFICATE-----
+MIIDBjCCAm+gAwIBAgICEAIwDQYJKoZIhvcNAQEFBQAwgYUxCzAJBgNVBAYTAlVT
+MREwDwYDVQQIEwhNYXJ5bGFuZDEUMBIGA1UEBxMLQ29sbGVnZVBhcmsxDDAKBgNV
+BAoTA1VNRDELMAkGA1UECxMCQ0UxETAPBgNVBAMTCEVtbWFudWVsMR8wHQYJKoZI
+hvcNAQkBFhBldGF5bG9yNUB1bWQuZWR1MB4XDTE0MTAxNzIwNDA1MFoXDTE1MTAx
+NzIwNDA1MFowgY0xCzAJBgNVBAYTAlVTMREwDwYDVQQIEwhNYXJ5bGFuZDEUMBIG
+A1UEBxMLQ29sbGVnZVBhcmsxDDAKBgNVBAoTA1VNRDELMAkGA1UECxMCQ0UxGTAX
+BgNVBAMTEFBLSUxhYlNlcnZlci5jb20xHzAdBgkqhkiG9w0BCQEWEGV0YXlsb3I1
+QHVtZC5lZHUwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAJ9OiAvB5LFrsFcL
+rFCcBcmaRvuE5G+8IpCzTvJpBALzUvDcrtJCfMmsRVuuh6CRjHptwi592uJpwQnc
+Mp/23ZqPEgxWgZ4FbPlwPrZmLlRoliEGAXSzNltDEunuNHdALTxI/6mvxHd3L2qa
+YPxuCjLii/zgmHLNOCJw4OYuSHWNAgMBAAGjezB5MAkGA1UdEwQCMAAwLAYJYIZI
+AYb4QgENBB8WHU9wZW5TU0wgR2VuZXJhdGVkIENlcnRpZmljYXRlMB0GA1UdDgQW
+BBTFCBqnuff8ti2jTUMoZWqZPFD/gjAfBgNVHSMEGDAWgBTDvoWA27TYfrCzloDF
+Jm0sdrFz3jANBgkqhkiG9w0BAQUFAAOBgQBigNizgP7jpd0pXHSbv/dDbjf7PYVo
+EzjdAwc+OTaUrutNph/x1UzBy2p3zOIOWfkayKhOEyUSsJwfc1NTIWLYRdFd5ARh
+LwPmCq8ZVePsdPvTms3qCYRJ47BqPMXBX3NYFqxkrPA5inEaDfAedukSfZ20xFNl
+ZjgAsFpR1uyv4g==
+-----END CERTIFICATE-----
