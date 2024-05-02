@@ -1,0 +1,5 @@
+irmovl $65, %eax   # %eax register is assigned value 65
+wrint %eax	       # output the value as an integer
+irmovl $10, %ebx   # 10 is \n  (newline)       
+wrch  %ebx         # printing the value as a character
+halt               # important: we need to stop  the program

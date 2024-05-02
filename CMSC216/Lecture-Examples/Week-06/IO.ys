@@ -1,0 +1,9 @@
+rdint  %eax     # a = 65 (via scanf())
+rdch   %ebx     # b = 'B' (via scanf())
+wrint  %eax     # printf("%d", a)
+wrch   %eax     # printf("%c", a)
+wrint  %ebx     # printf("%d", b)
+wrch   %ebx     # printf("%c", b)
+irmovl $10,%ecx # c = 10
+wrch   %ecx     # printf("%c", c)
+halt

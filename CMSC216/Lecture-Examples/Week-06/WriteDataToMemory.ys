@@ -1,0 +1,26 @@
+#
+# To see the changes in memory look at the
+# simulator output ("Changes to memory" Section)
+#
+
+# Writing first value to memory
+irmovl $3, %eax        
+rmmovl %eax, MyData     # updating the value in memory
+
+# Writing second value to memory
+irmovl $6, %eax
+irmovl MyData,%ebx      # a = MyData (using irmovl)
+rmmovl %eax, 4(%ebx)    # updating the value in memory
+
+# Writing third value to memory
+# Notice we did not defined a .long for this one
+irmovl $9, %eax
+irmovl MyData,%ebx      # a = MyData (using irmovl)
+rmmovl %eax, 8(%ebx)    # updating the value in memory
+
+halt
+  .align 4 
+MyData:
+  .long 0x1             # my static data
+  .long 0x2
+

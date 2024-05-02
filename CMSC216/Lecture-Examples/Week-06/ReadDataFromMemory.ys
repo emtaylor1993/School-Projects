@@ -1,0 +1,25 @@
+# Reading data from memory (mrmovl)
+
+# reading first value
+irmovl $10, %esi        # newline
+mrmovl MyData,%eax      # a = *MyData (notice a label is used)
+wrint %eax
+wrch %esi               # printf("\n")
+
+# reading same value again
+irmovl MyData,%eax      # a = MyData (notice we are using irmovl)
+mrmovl 0(%eax), %ebx    # Reloading value (we need parenthesis, 0 optional)
+wrint %ebx
+wrch %esi               # printf("\n")
+
+# loading next value
+mrmovl 4(%eax), %ebx    # value that is 4 bytes from MyData
+wrint %ebx
+wrch %esi               # printf("\n")
+
+halt
+  .align 4 
+MyData:
+  .long 0x8             # my static data
+  .long 0x9
+

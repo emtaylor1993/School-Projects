@@ -1,0 +1,11 @@
+#Reads two values and computes the sum
+
+rdint  %edx         # reading first integer value
+rdint  %ecx         # reading second integer value
+
+addl   %edx, %ecx   # computing the sum
+wrint  %ecx
+
+irmovl $10,%eax     # newline
+wrch   %eax     
+halt

@@ -1,0 +1,17 @@
+#Reads two values and computes the sum and difference
+
+rdint  %eax         # reading first integer value
+rdint  %ebx         # reading second integer value
+rrmovl %ebx, %edx   # making copy of %ebx 
+
+addl   %eax, %edx   # computing the sum
+wrint  %edx
+irmovl $10,%ecx     # newline
+wrch   %ecx     
+
+subl   %eax, %ebx   # computing difference
+wrint  %ebx         # we no longer need %ebx so we
+                    # mind if it gets overwritten
+wrch   %ecx         # newline
+
+halt

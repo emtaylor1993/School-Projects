@@ -1,0 +1,7 @@
+irmovl $65,%eax  
+wrch %eax
+halt
+  .align 4
+MyData:
+  .long 0x6f
+  .long 812   # decimal 812 (not hex)
