@@ -1,0 +1,32 @@
+#
+# Computing the square of a value provided by the user.
+# Illustrates passing a parameter and returning a value
+# Sections marked ON_ENTRY and ON_EXIT are always present
+# when calling a function.  Notice we don't have to 
+# use "main:" but it clarifies where the program starts
+#
+
+main:   irmovl $0x1000, %esp	# init stack ptr
+
+        rdint %ebx              # reading value from user
+        pushl %ebx		# pushing parameter
+        call square             # function call
+        popl %ebx               # removing parameter
+        wrint %eax		# accessing the return value
+        call prtnl       
+        halt 
+
+square: pushl %ebp		# ON_ENTRY saving old base/frame ptr 
+ 	rrmovl %esp, %ebp	# ON_ENTRY set new frame ptr 
+
+        mrmovl 8(%ebp), %ecx	# Retrieving parameter
+	multl %ecx, %ecx	# Computing square 
+        rrmovl %ecx, %eax       # Leaving value to return in %eax 
+		
+        rrmovl %ebp, %esp	# ON_EXIT reset stack ptr
+	popl %ebp		# ON_EXIT restore old base/frame ptr
+	ret                     # ON_EXIT
+
+prtnl: irmovl $10, %edx         # assuming edx is caller save
+       wrch %edx
+       ret

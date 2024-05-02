@@ -1,0 +1,55 @@
+#
+# Computing area of trapezoid.
+# area =  h/2(b1 + b2). 
+# Order of provided value is 
+# is h, b1, b2.
+# Try: 4, 6, 12 --> area 36
+#
+
+main: irmovl $0x1000, %esp  # init stack ptr
+
+      rdint %ebx            # reading height
+      rdint %esi	        # reading b1
+      rdint %edi            # reading b2
+      pushl %edi	        # pushing parameter (rightmost first)
+      pushl %esi	        # pushing parameter
+      pushl %ebx	        # pushing parameter
+
+      call area             # function call
+
+      popl %ebx             # removing parameters
+      popl %ebx             # removing parameters
+      popl %ebx             # removing parameters
+ 
+      wrint %eax	        # accessing the return value
+      call prtl       
+      halt 
+
+area: pushl %ebp	        # ON_ENTRY saving old base/frame ptr 
+      rrmovl %esp, %ebp	    # ON_ENTRY set new frame ptr 
+      irmovl $8, %eax       # We will have two local variables 
+      subl %eax, %esp       # (8 bytes, 4 byte each). Subtracting 
+                            # to adjust stack
+
+      mrmovl 8(%ebp), %eax  # Retrieving height
+      mrmovl 12(%ebp), %edx # Retrieving b1
+      mrmovl 16(%ebp), %ecx # Retrieving b2
+
+      addl %edx, %ecx       # adding b1 + b2
+      rmmovl %ecx, -4(%ebp) # storing sum in local var
+
+      irmovl $2, %ecx       # dividing height by 2
+      divl %ecx, %eax         
+      rmmovl %eax, -8(%ebp) # storing division result in second local var
+
+      mrmovl -4(%ebp), %edx # accessing local var1
+      mrmovl -8(%ebp), %eax # accessing local var2
+      multl %edx, %eax	    # computes area and leaves result in %eax
+
+      rrmovl %ebp, %esp	    # ON_EXIT reset stack ptr
+      popl %ebp		        # ON_EXIT restore old base/frame ptr
+      ret                   # ON_EXIT
+
+prtl: irmovl $10, %edx      # assuming edx is caller save
+      wrch %edx
+      ret

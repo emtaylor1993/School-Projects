@@ -1,0 +1,46 @@
+#
+# Computes average of two values (x, y)
+#  int avg(int x, int y) {
+#     int local;
+#
+#     local = x + y;
+#     local = loca1 / 2;
+#
+#     return local;
+#  }
+#
+
+main: irmovl $0x1000, %esp  # init stack ptr
+
+      rdint %ebx            # reading x
+      rdint %esi	        # reading y 
+      pushl %esi	        # pushing parameter (rightmost first)
+      pushl %ebx	        # pushing parameter
+      call avg              # function call
+      popl %ebx             # removing parameters
+      popl %ebx             # removing parameters
+      wrint %eax	        # accessing the return value
+      call prtl       
+      halt 
+
+avg:  pushl %ebp	        # ON_ENTRY saving old base/frame ptr 
+      rrmovl %esp, %ebp	    # ON_ENTRY set new frame ptr 
+      irmovl $4, %eax       # We will have  one local
+      subl %eax, %esp       # Subtracting to adjust stack
+
+      mrmovl 8(%ebp), %eax  # Retrieving x
+      mrmovl 12(%ebp), %edx # Retrieving y
+      addl %eax, %edx       # adding x + y
+      rmmovl %edx, -4(%ebp) # storing sum in local var
+
+      irmovl $2, %edx       
+      mrmovl -4(%ebp), %eax # accessing local var1
+      divl %edx, %eax	    # divides by 2 and leaves result in %eax
+
+      rrmovl %ebp, %esp	    # ON_EXIT reset stack ptr
+      popl %ebp		        # ON_EXIT restore old base/frame ptr
+      ret                   # ON_EXIT
+
+prtl: irmovl $10, %edx      # assuming edx is caller save
+      wrch %edx
+      ret

@@ -1,0 +1,37 @@
+#
+# Example of recursion with parameter.  The function body is:
+# int fact(int n) {
+#    if (n == 1)
+#	return 1
+#    return n * fact(n-1)  
+# }
+# 
+
+main:	  irmovl $0x1000, %esp	# init stack ptr
+	      rdint %ebx
+	      pushl %ebx		    # pushing parameter
+	      call fact
+	      popl %ebx             # remove parameter
+	      wrint %eax		    # accessing the return value
+          irmovl $10, %ecx 	    # newline
+          wrch %ecx
+          halt 
+
+fact:	  pushl %ebp		    # ON_ENTRY saving old frame ptr 
+	      rrmovl %esp, %ebp	    # ON_ENTRY set new frame ptr 
+
+	      mrmovl 8(%ebp), %edx	# Retrieving parameter  
+	      irmovl $1, %ecx        
+	      subl %ecx, %edx       # computing n - 1
+	      je baseCase           # if equal 1 we are done
+recStep:  pushl %edx		    # pushing n - 1 parameter
+	      call fact		        # recursive call
+	      popl %edx		        # getting rid of passed parameter
+          mrmovl 8(%ebp), %edx  # accesing parameter n
+          multl %edx, %eax      # %eax has result of previous call
+	      jmp factEnd
+baseCase: irmovl $1, %eax
+
+factEnd:  rrmovl %ebp, %esp	    # ON_EXIT reset stack ptr
+	      popl %ebp		        # ON_EXIT restore old frame 
+	      ret                   # ON_EXIT
