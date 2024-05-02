@@ -1,0 +1,4 @@
+system 	0xb7ea78b0
+exit   	0xb7e9cb30
+/bin/sh 0xbffffeab
+/bin/sh 0xbffffe0c // Address found using the gdb, was not correct.
