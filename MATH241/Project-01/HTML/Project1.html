@@ -1,0 +1,588 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Emmanuel Taylor</title><meta name="generator" content="MATLAB 8.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-10-06"><meta name="DC.source" content="Project1.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Emmanuel Taylor</h1><!--introduction--><p>MATH241 - Calculus III September 21, 2014 Section 0221 Matlab Assignment 1</p><!--/introduction--><p><b>PROBLEM 1</b></p><pre>Clear Matlab completely with clear all.</pre><pre class="codeinput">clear <span class="string">all</span>
+</pre><p><b>PROBLEM 2</b></p><pre>Define symbolic variables x and t.</pre><pre class="codeinput">syms <span class="string">x</span> <span class="string">t</span>
+</pre><p><b>PROBLEM 3</b></p><pre>Set t to be a real variable.</pre><pre class="codeinput">sym(t, <span class="string">'real'</span>)
+</pre><pre class="codeoutput"> 
+ans =
+ 
+t
+ 
+</pre><p><b>PROBLEM 4</b></p><pre>Add 10 and 17.</pre><pre class="codeinput">problem4 = 10 + 17
+</pre><pre class="codeoutput">
+problem4 =
+
+    27
+
+</pre><p><b>PROBLEM 5</b></p><pre>Factor the polynomial x^5 - 3x^4 + x^3 + 5x^2 - 6x + 2.</pre><pre class="codeinput">problem5 = factor(x^5 - 3*x^4 + x^3 + 5*x^2 - 6*x + 2)
+</pre><pre class="codeoutput"> 
+problem5 =
+ 
+(x^2 - 2)*(x - 1)^3
+ 
+</pre><p><b>PROBLEM 6</b></p><pre>Solve the equation x^2 + 4x - 1 = 0.</pre><pre class="codeinput">problem6 = solve(x^2 + 4*x - 1)
+</pre><pre class="codeoutput"> 
+problem6 =
+ 
+   5^(1/2) - 2
+ - 5^(1/2) - 2
+ 
+</pre><p><b>PROBLEM 7</b></p><pre>Differentiate the function f(x) = (x^2)/(x-1) + cos(x^2).</pre><pre class="codeinput">problem7 = diff((x^2)/(x-1) + cos(x^2))
+</pre><pre class="codeoutput"> 
+problem7 =
+ 
+(2*x)/(x - 1) - 2*x*sin(x^2) - x^2/(x - 1)^2
+ 
+</pre><p><b>PROBLEM 8</b></p><pre>Differentiate the function f(x) = xe^(2x-1) and then plug in -1.</pre><pre class="codeinput">problem8 = subs(diff(x*exp(2*x-1)), x, -1)
+</pre><pre class="codeoutput">
+problem8 =
+
+   -0.0498
+
+</pre><p><b>PROBLEM 9</b></p><pre>Integrate f(x) = x^2 + xcos(x).</pre><pre class="codeinput">problem9 = int(x^2 + x*cos(x))
+</pre><pre class="codeoutput"> 
+problem9 =
+ 
+cos(x) + x*sin(x) + x^3/3
+ 
+</pre><p><b>PROBLEM 10</b></p><pre>Find the area under the graph of f(x) = 9 - x^2 and above the x-axis.</pre><pre class="codeinput">problem10 = int(9 - x^2)
+</pre><pre class="codeoutput"> 
+problem10 =
+ 
+-(x*(x^2 - 27))/3
+ 
+</pre><p><b>PROBLEM 11 PART A</b></p><pre>Define the vectors a = 3i + 2j - k and b = i + 3j + 2k.</pre><pre class="codeinput">a = [2 3 -1]
+b = [1 3 2]
+</pre><pre class="codeoutput">
+a =
+
+     2     3    -1
+
+
+b =
+
+     1     3     2
+
+</pre><p><b>PROBLEM 11 PART B</b></p><pre>Find the projection of a onto b.</pre><pre class="codeinput">projection = (dot(a, b)/(norm(b)*norm(b)))*b
+</pre><pre class="codeoutput">
+projection =
+
+    0.6429    1.9286    1.2857
+
+</pre><p><b>PROBLEM 11 PART C</b></p><pre>Find the unit vector perpendicular to both a and b.</pre><pre class="codeinput">u = cross(a, b)
+norm1 = norm(u)
+
+unitVector = u/norm1
+</pre><pre class="codeoutput">
+u =
+
+     9    -5     3
+
+
+norm1 =
+
+   10.7238
+
+
+unitVector =
+
+    0.8393   -0.4663    0.2798
+
+</pre><p><b>PROBLEM 11 PART D</b></p><pre>Find the sine of the angle between a and b.</pre><pre class="codeinput">sine = norm(cross(a, b))/(norm(a)*norm(b))
+</pre><pre class="codeoutput">
+sine =
+
+    0.7660
+
+</pre><p><b>PROBLEM 12</b></p><pre>Define four points P = (2, -1, 3), Q = (0, 7, 9), R = (4, -9, -3) and S
+= (7, -6, -6) and then with two subtractions and one dot product all on
+one Matlab line, show that the line through P and Q is perpendicular to
+the line through R and S.</pre><pre class="codeinput">P = [2 -1 3]
+Q = [0 7 9]
+R = [4 -9 -3]
+S = [7 -6 -6]
+
+dotProduct1 = dot(Q - P, S - R)
+
+<span class="comment">%  Because the dot product of these two lines is zero, it follows that the</span>
+<span class="comment">%  two lines are perpendicular to each other.</span>
+</pre><pre class="codeoutput">
+P =
+
+     2    -1     3
+
+
+Q =
+
+     0     7     9
+
+
+R =
+
+     4    -9    -3
+
+
+S =
+
+     7    -6    -6
+
+
+dotProduct1 =
+
+     0
+
+</pre><p><b>PROBLEM 13</b></p><pre>Define two points P = [1 -2 3] and Q = [2 -1 3] and one vector n = 2i +
+2j +3k and then with one subtraction and one dot product all on one
+Matlab line, show that Q is not contained in the plane containing P and
+normal to n.</pre><pre class="codeinput">P = [1 -2 3]
+Q = [2 -1 3]
+n = [2 2 3]
+
+dotProduct2 = dot(n, Q - P)
+
+<span class="comment">%  Because the dot product of these two vectors is not zero, it follows</span>
+<span class="comment">%  that n cannot be normal to the plane containing P and Q.</span>
+</pre><pre class="codeoutput">
+P =
+
+     1    -2     3
+
+
+Q =
+
+     2    -1     3
+
+
+n =
+
+     2     2     3
+
+
+dotProduct2 =
+
+     4
+
+</pre><p><b>PROBLEM 14</b></p><pre>Define four points P = [5 0 2], Q = [1 1 1], R = [0 1 -2] and S = [1 -2
+-1] and then with five subtractions, two cross products, and one dot
+product all one one Matlab line, find the distance from S to plane
+containing three other points.</pre><pre class="codeinput">P = [5 0 2]
+Q = [1 1 1]
+R = [0 1 -2]
+S = [1 -2 -1]
+
+distance = abs(dot((cross(R - P, Q - P)), S - P)/norm(cross(R - P, Q - P)))
+</pre><pre class="codeoutput">
+P =
+
+     5     0     2
+
+
+Q =
+
+     1     1     1
+
+
+R =
+
+     0     1    -2
+
+
+S =
+
+     1    -2    -1
+
+
+distance =
+
+    2.7085
+
+</pre><p><b>PROBLEM 15 PART A</b></p><pre>Define the vector valued function r(t) = cos(t)i + cos(t)j +
+sqrt(2)sin(t)k.</pre><pre class="codeinput">r = [cos(t) cos(t) sqrt(2)*sin(t)]
+</pre><pre class="codeoutput"> 
+r =
+ 
+[ cos(t), cos(t), 2^(1/2)*sin(t)]
+ 
+</pre><p><b>PROBLEM 15 PART B</b></p><pre>Find the tangent vector T(t).</pre><pre class="codeinput">v = diff(r)
+T = simplify(v/norm(v))
+</pre><pre class="codeoutput"> 
+v =
+ 
+[ -sin(t), -sin(t), 2^(1/2)*cos(t)]
+ 
+ 
+T =
+ 
+[ -sin(t)/(2*abs(cos(t))^2 + 2*abs(sin(t))^2)^(1/2), -sin(t)/(2*abs(cos(t))^2 + 2*abs(sin(t))^2)^(1/2), cos(t)/(abs(cos(t))^2 + abs(sin(t))^2)^(1/2)]
+ 
+</pre><p><b>PROBLEM 15 PART C</b></p><pre>Find the acceleration vector r''(pi/4)</pre><pre class="codeinput">a = subs(diff(v), t, pi/4)
+</pre><pre class="codeoutput">
+a =
+
+   -0.7071   -0.7071   -1.0000
+
+</pre><p><b>PROBLEM 16 PART A</b></p><pre>Plot the following: The function f(x) = (x - 2)^2 * (x - 3)^2.</pre><pre class="codeinput">plot1 = ezplot(((x - 2)^2)*((x - 3)^2), [-1000 1000])
+title <span class="string">'Plot 1: Function (x - 2)^2 * (x - 3)^2 from -1000 to 1000'</span>
+xlabel <span class="string">'X Axis'</span>
+ylabel <span class="string">'Y Axis'</span>
+grid
+</pre><pre class="codeoutput">
+plot1 =
+
+  175.0356
+
+</pre><img vspace="5" hspace="5" src="Project1_01.png" alt=""> <p><b>PROBLEM 16 PART B</b></p><pre>Plot the following: The vector valued function r(t) = sin(t)i + tj +
+cos(t)k with 0 &lt;= t &lt;= 10pi.</pre><pre class="codeinput">r = [sin(t) t cos(t)]
+plot2 = ezplot3(r(1), r(2), r(3), [0, 10*pi])
+view([10 10 10])
+title <span class="string">'Plot 2: Vector Valued Function r(t) = sin(t)i + tj + cos(t)k from 0 to 10pi'</span>
+xlabel <span class="string">'X Axis'</span>
+ylabel <span class="string">'Y Axis'</span>
+zlabel <span class="string">'Z Axis'</span>
+</pre><pre class="codeoutput"> 
+r =
+ 
+[ sin(t), t, cos(t)]
+ 
+
+plot2 =
+
+  175.0367
+
+</pre><img vspace="5" hspace="5" src="Project1_02.png" alt=""> <p><b>PROBLEM 16 PART C</b></p><pre>Plot the following: The line segment joining (1, -1, 0) and (-5, 6, 10).</pre><pre class="codeinput">P1 = [1, -1, 0]
+P2 = [-5, 6, 10]
+pts = [P1; P2]
+plot3(pts(:,1), pts(:,2), pts(:,3))
+view([10 10 10])
+daspect([1 1 1])
+title <span class="string">'Plot 3: Line Segment joining (1 -1 0) and (-5 6 10)'</span>
+xlabel <span class="string">'X Axis'</span>
+ylabel <span class="string">'Y Axis'</span>
+zlabel <span class="string">'Z Axis'</span>
+grid
+</pre><pre class="codeoutput">
+P1 =
+
+     1    -1     0
+
+
+P2 =
+
+    -5     6    10
+
+
+pts =
+
+     1    -1     0
+    -5     6    10
+
+</pre><img vspace="5" hspace="5" src="Project1_03.png" alt=""> <p><b>PROBLEM 16 PART D</b></p><pre>Plot the following: The plane x + 3y + 3z = 9.</pre><pre class="codeinput">syms <span class="string">x</span> <span class="string">y</span> <span class="string">z</span>
+ezmesh(x, y, 9 - x - 3*y, [-5, 5, -5, 5])
+view([10 10 10])
+title <span class="string">'Plot 4: The plane x + 3y + 3x = 9'</span>
+xlabel <span class="string">'X Axis'</span>
+ylabel <span class="string">'Y Axis'</span>
+zlabel <span class="string">'Z Axis'</span>
+colormap([0 0 1])
+</pre><img vspace="5" hspace="5" src="Project1_04.png" alt=""> <p><b>PROBLEM 16 PART E</b></p><pre>Plot the following: The plane x + 4y = 10.</pre><pre class="codeinput">syms <span class="string">x</span> <span class="string">y</span> <span class="string">z</span>
+ezmesh(x, (10 -x)/4, z, [-5, 5, -5, 5])
+view([10 10 10])
+title <span class="string">'Plot 5: The plane x + 4y = 10'</span>
+xlabel <span class="string">'X Axis'</span>
+ylabel <span class="string">'Y Axis'</span>
+zlabel <span class="string">'Z Axis'</span>
+colormap([0 0 1])
+</pre><img vspace="5" hspace="5" src="Project1_05.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2012b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Emmanuel Taylor
+% MATH241 - Calculus III
+% September 21, 2014
+% Section 0221
+% Matlab Assignment 1
+
+%% 
+% *PROBLEM 1*
+%
+%  Clear Matlab completely with clear all.
+clear all
+
+%%
+% *PROBLEM 2*
+%
+%  Define symbolic variables x and t.
+syms x t
+
+%% 
+% *PROBLEM 3*
+%
+%  Set t to be a real variable.
+sym(t, 'real')
+
+%% 
+% *PROBLEM 4*
+%
+%  Add 10 and 17.
+problem4 = 10 + 17
+
+%%
+% *PROBLEM 5*
+%
+%  Factor the polynomial x^5 - 3x^4 + x^3 + 5x^2 - 6x + 2.
+problem5 = factor(x^5 - 3*x^4 + x^3 + 5*x^2 - 6*x + 2)
+
+%%
+% *PROBLEM 6*
+%
+%  Solve the equation x^2 + 4x - 1 = 0.
+problem6 = solve(x^2 + 4*x - 1)
+
+%%
+% *PROBLEM 7*
+%
+%  Differentiate the function f(x) = (x^2)/(x-1) + cos(x^2).
+problem7 = diff((x^2)/(x-1) + cos(x^2))
+
+%%
+% *PROBLEM 8*
+%
+%  Differentiate the function f(x) = xe^(2x-1) and then plug in -1.
+problem8 = subs(diff(x*exp(2*x-1)), x, -1)
+
+%%
+% *PROBLEM 9*
+%
+%  Integrate f(x) = x^2 + xcos(x).
+problem9 = int(x^2 + x*cos(x))
+
+%%
+% *PROBLEM 10*
+%
+%  Find the area under the graph of f(x) = 9 - x^2 and above the x-axis.
+problem10 = int(9 - x^2)
+
+%%
+% *PROBLEM 11 PART A*
+% 
+%  Define the vectors a = 3i + 2j - k and b = i + 3j + 2k.
+a = [2 3 -1]
+b = [1 3 2]
+
+%%
+% *PROBLEM 11 PART B*
+%
+%  Find the projection of a onto b.
+projection = (dot(a, b)/(norm(b)*norm(b)))*b
+
+%%
+% *PROBLEM 11 PART C*
+%
+%  Find the unit vector perpendicular to both a and b.
+u = cross(a, b)
+norm1 = norm(u)
+
+unitVector = u/norm1
+
+%%
+% *PROBLEM 11 PART D*
+%
+%  Find the sine of the angle between a and b.
+sine = norm(cross(a, b))/(norm(a)*norm(b))
+
+%%
+% *PROBLEM 12*
+%
+%  Define four points P = (2, -1, 3), Q = (0, 7, 9), R = (4, -9, -3) and S
+%  = (7, -6, -6) and then with two subtractions and one dot product all on
+%  one Matlab line, show that the line through P and Q is perpendicular to
+%  the line through R and S.
+P = [2 -1 3]
+Q = [0 7 9]
+R = [4 -9 -3]
+S = [7 -6 -6]
+
+dotProduct1 = dot(Q - P, S - R)
+
+%  Because the dot product of these two lines is zero, it follows that the
+%  two lines are perpendicular to each other.
+
+%%
+% *PROBLEM 13*
+%
+%  Define two points P = [1 -2 3] and Q = [2 -1 3] and one vector n = 2i +
+%  2j +3k and then with one subtraction and one dot product all on one
+%  Matlab line, show that Q is not contained in the plane containing P and
+%  normal to n.
+P = [1 -2 3]
+Q = [2 -1 3]
+n = [2 2 3]
+
+dotProduct2 = dot(n, Q - P)
+
+%  Because the dot product of these two vectors is not zero, it follows
+%  that n cannot be normal to the plane containing P and Q.
+
+%%
+% *PROBLEM 14*
+%
+%  Define four points P = [5 0 2], Q = [1 1 1], R = [0 1 -2] and S = [1 -2
+%  -1] and then with five subtractions, two cross products, and one dot
+%  product all one one Matlab line, find the distance from S to plane
+%  containing three other points.
+P = [5 0 2]
+Q = [1 1 1]
+R = [0 1 -2]
+S = [1 -2 -1]
+
+distance = abs(dot((cross(R - P, Q - P)), S - P)/norm(cross(R - P, Q - P)))
+
+%%
+% *PROBLEM 15 PART A*
+%
+%  Define the vector valued function r(t) = cos(t)i + cos(t)j +
+%  sqrt(2)sin(t)k.
+r = [cos(t) cos(t) sqrt(2)*sin(t)]
+
+%%
+% *PROBLEM 15 PART B*
+%
+%  Find the tangent vector T(t).
+v = diff(r)
+T = simplify(v/norm(v))
+
+%%
+% *PROBLEM 15 PART C*
+%
+%  Find the acceleration vector r''(pi/4)
+a = subs(diff(v), t, pi/4)
+
+%%
+% *PROBLEM 16 PART A*
+%
+%  Plot the following: The function f(x) = (x - 2)^2 * (x - 3)^2.
+plot1 = ezplot(((x - 2)^2)*((x - 3)^2), [-1000 1000])
+title 'Plot 1: Function (x - 2)^2 * (x - 3)^2 from -1000 to 1000'
+xlabel 'X Axis'
+ylabel 'Y Axis'
+grid
+
+%% 
+% *PROBLEM 16 PART B*
+%
+%  Plot the following: The vector valued function r(t) = sin(t)i + tj +
+%  cos(t)k with 0 <= t <= 10pi.
+r = [sin(t) t cos(t)]
+plot2 = ezplot3(r(1), r(2), r(3), [0, 10*pi])
+view([10 10 10])
+title 'Plot 2: Vector Valued Function r(t) = sin(t)i + tj + cos(t)k from 0 to 10pi'
+xlabel 'X Axis'
+ylabel 'Y Axis'
+zlabel 'Z Axis'
+
+%%
+% *PROBLEM 16 PART C*
+%
+%  Plot the following: The line segment joining (1, -1, 0) and (-5, 6, 10).
+P1 = [1, -1, 0]
+P2 = [-5, 6, 10]
+pts = [P1; P2]
+plot3(pts(:,1), pts(:,2), pts(:,3))
+view([10 10 10])
+daspect([1 1 1])
+title 'Plot 3: Line Segment joining (1 -1 0) and (-5 6 10)'
+xlabel 'X Axis'
+ylabel 'Y Axis'
+zlabel 'Z Axis'
+grid
+
+%%
+% *PROBLEM 16 PART D*
+%
+%  Plot the following: The plane x + 3y + 3z = 9.
+syms x y z
+ezmesh(x, y, 9 - x - 3*y, [-5, 5, -5, 5])
+view([10 10 10])
+title 'Plot 4: The plane x + 3y + 3x = 9'
+xlabel 'X Axis'
+ylabel 'Y Axis'
+zlabel 'Z Axis'
+colormap([0 0 1])
+
+%%
+% *PROBLEM 16 PART E*
+%
+%  Plot the following: The plane x + 4y = 10.
+syms x y z
+ezmesh(x, (10 -x)/4, z, [-5, 5, -5, 5])
+view([10 10 10])
+title 'Plot 5: The plane x + 4y = 10'
+xlabel 'X Axis'
+ylabel 'Y Axis'
+zlabel 'Z Axis'
+colormap([0 0 1])
+##### SOURCE END #####
+--></body></html>

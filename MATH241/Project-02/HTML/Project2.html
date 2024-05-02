@@ -1,0 +1,339 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Emmanuel Taylor</title><meta name="generator" content="MATLAB 8.2"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-10-27"><meta name="DC.source" content="Project2.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Emmanuel Taylor</h1><!--introduction--><p>Matlab Project 2 Math241 Section 0201 October 28, 2014</p><!--/introduction--><p><b>PROBLEM 1</b>  Clear Matlab completely with clear all.</p><pre class="codeinput">clear <span class="string">all</span>
+</pre><p><b>PROBLEM 2</b>  Plot the function f(x, y) = 9 - x^2 - y^2 with the view at (10, 10, 10).</p><pre class="codeinput">figure;
+syms <span class="string">x</span> <span class="string">y</span>;
+ezsurf(9 - x^2 - y^2)
+view([10 10 10])
+xlabel <span class="string">'x axis'</span>
+ylabel <span class="string">'y axis'</span>
+zlabel <span class="string">'z axis'</span>
+title <span class="string">'Plot of function f(x,y) = 9 - x^2 - y^2'</span>
+</pre><img vspace="5" hspace="5" src="Project2_01.png" alt=""> <p><b>PROBLEM 3</b>  Plot the function x = sqrt(y^2 + z^2) with the view at (10, 10, 10).</p><pre class="codeinput">figure;
+syms <span class="string">x</span> <span class="string">z</span>;
+[y, z] = meshgrid(-5:0.1:5, -5:0.1:5);
+x = sqrt(y.^2 + z.^2);
+surf(x, y, z);
+view([10 10 10])
+xlabel <span class="string">'x axis'</span>
+ylabel <span class="string">'y axis'</span>
+zlabel <span class="string">'z axis'</span>
+title <span class="string">'Plot of function x = sqrt(y^2 + z^2)'</span>
+</pre><img vspace="5" hspace="5" src="Project2_02.png" alt=""> <p><b>PROBLEM 4</b>  Plot the surface y = 4 - x^2 with the view at (10, 10, 10).</p><pre class="codeinput">figure;
+syms <span class="string">x</span> <span class="string">z</span>;
+[x, z] = meshgrid(-5:0.1:5, -5:0.1:5);
+y = 4 - x.^2;
+surf(x, y, z);
+view([10 10 10])
+xlabel <span class="string">'x axis'</span>
+ylabel <span class="string">'y axis'</span>
+zlabel <span class="string">'z axis'</span>
+title <span class="string">'Plot of surface y = 4 - x^2'</span>
+</pre><img vspace="5" hspace="5" src="Project2_03.png" alt=""> <p><b>PROBLEM 5</b>  Find the partial derivative of [(sin(x^2*y))/y] with respect to y.</p><pre class="codeinput">syms <span class="string">x</span> <span class="string">y</span>;
+problem5 = diff(((sin((x^2)*y))/y), y)
+</pre><pre class="codeoutput"> 
+problem5 =
+ 
+(x^2*cos(x^2*y))/y - sin(x^2*y)/y^2
+ 
+</pre><p><b>PROBLEM 6</b>  Find the second partial derivative of (x^2 - y)/(x + y) with respect to  y and then with respect to x.</p><pre class="codeinput">syms <span class="string">x</span> <span class="string">y</span>;
+problem6 = diff(diff((x^2 - y)/(x + y), y), x)
+</pre><pre class="codeoutput"> 
+problem6 =
+ 
+1/(x + y)^2 - (2*x)/(x + y)^2 - (2*(- x^2 + y))/(x + y)^3
+ 
+</pre><p><b>PROBLEM 7</b>  Find the gradient of f for f(x, y) = (xy)/(x^2*y + x + y)</p><pre class="codeinput">syms <span class="string">x</span> <span class="string">y</span>;
+problem7 = jacobian((x*y)/((x^2)*y + x + y), [x y])
+</pre><pre class="codeoutput"> 
+problem7 =
+ 
+[ y/(y*x^2 + x + y) - (x*y*(2*x*y + 1))/(y*x^2 + x + y)^2, x/(y*x^2 + x + y) - (x*y*(x^2 + 1))/(y*x^2 + x + y)^2]
+ 
+</pre><p><b>PROBLEM 8</b>  Find the gradient of f at (-1, 0) for f(x, y) = 5x^3y^2 - y/x.</p><pre class="codeinput">syms <span class="string">x</span> <span class="string">y</span>;
+problem8 = subs(jacobian(5*(x^3)*(y^2) - y/x, [x y]), {x, y}, {-1, 0})
+</pre><pre class="codeoutput"> 
+problem8 =
+ 
+[ 0, 1]
+ 
+</pre><p><b>PROBLEM 9</b>  Find the directional derivative of g(x, y) = x^2 + y^3 at (1, -2) in the  direction of a = 2i - 1j.</p><pre class="codeinput">syms <span class="string">x</span> <span class="string">y</span>;
+a = [2 -1];
+u = a/norm(a);
+problem9 = dot(u, subs(jacobian(x^2 + y^3, [x y]), {x, y}, {1, -2}))
+</pre><pre class="codeoutput"> 
+problem9 =
+ 
+-(8*5^(1/2))/5
+ 
+</pre><p><b>PROBLEM 10</b>  Find all critical points for f(x, y) = (y - 2)ln(xy). Remember that ln  in Matlab is log. On your printout, write the points as coordinate pairs  next to the output.</p><pre class="codeinput">syms <span class="string">x</span> <span class="string">y</span>;
+f1 = (y - 2)*log(x*y);
+[xsoln1, ysoln1] = solve(jacobian(f1, [x y]))
+
+<span class="comment">%  The critical point for f(x, y) is (1/2, 2).</span>
+</pre><pre class="codeoutput"> 
+xsoln1 =
+ 
+1/2
+ 
+ 
+ysoln1 =
+ 
+2
+ 
+</pre><p><b>PROBLEM 11</b>  Find all critical points for f(x, y) = x^3 + y^3 - 6xy. On your  printout write the points as coordinate pairs next to the output.</p><pre class="codeinput">syms <span class="string">x</span> <span class="string">y</span>;
+f2 = x^3 + y^3 - 6*x*y;
+[xsoln2, ysoln2] = solve(jacobian(f2, [x y]))
+
+<span class="comment">%  The critical points for f(x, y) are (0, 0), (2, 2), (3^(1/2)*i - 1,</span>
+<span class="comment">%  -3^(1/2)*i - 1), (-3^(1/2)*i - 1, 3^(1/2)*i - 1).</span>
+</pre><pre class="codeoutput"> 
+xsoln2 =
+ 
+               0
+               2
+   3^(1/2)*i - 1
+ - 3^(1/2)*i - 1
+ 
+ 
+ysoln2 =
+ 
+               0
+               2
+ - 3^(1/2)*i - 1
+   3^(1/2)*i - 1
+ 
+</pre><p><b>PROBLEM 12</b>  Use Lagrange multipliers to find the maximum and minimum values of f(x,  y) = xy^2. Subject the constraint x^2 + y = 16. On your printout write a  neat summary next to the output.</p><pre class="codeinput">syms <span class="string">x</span> <span class="string">y</span> <span class="string">L</span>;
+f3 = x*y^2;
+g = x^2 + y - 16;
+firstpart = jacobian(f3, [x y]) - L*jacobian(g, [x y]);
+[Lsoln, xsoln3, ysoln3] = solve(firstpart, g)
+values = subs(f3, {x, y}, {xsoln3, ysoln3})
+
+<span class="comment">%  As you can see, using Lagrange multipliers, the maximum value of f(x, y)</span>
+<span class="comment">%  is (16834*5^(1/2))/125 and the minimum value of f(x, y) is</span>
+<span class="comment">%  -(16834*5^(1/2))/125.</span>
+</pre><pre class="codeoutput"> 
+Lsoln =
+ 
+                 0
+                 0
+  (512*5^(1/2))/25
+ -(512*5^(1/2))/25
+ 
+ 
+xsoln3 =
+ 
+              4
+             -4
+  (4*5^(1/2))/5
+ -(4*5^(1/2))/5
+ 
+ 
+ysoln3 =
+ 
+    0
+    0
+ 64/5
+ 64/5
+ 
+ 
+values =
+ 
+                    0
+                    0
+  (16384*5^(1/2))/125
+ -(16384*5^(1/2))/125
+ 
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Emmanuel Taylor
+% Matlab Project 2
+% Math241 Section 0201
+% October 28, 2014
+
+%% 
+% *PROBLEM 1*
+%  Clear Matlab completely with clear all.
+clear all
+
+%%
+% *PROBLEM 2*
+%  Plot the function f(x, y) = 9 - x^2 - y^2 with the view at (10, 10, 10).
+figure;
+syms x y;
+ezsurf(9 - x^2 - y^2)
+view([10 10 10])
+xlabel 'x axis'
+ylabel 'y axis'
+zlabel 'z axis'
+title 'Plot of function f(x,y) = 9 - x^2 - y^2'
+
+%%
+% *PROBLEM 3*
+%  Plot the function x = sqrt(y^2 + z^2) with the view at (10, 10, 10).
+figure;
+syms x z;
+[y, z] = meshgrid(-5:0.1:5, -5:0.1:5);
+x = sqrt(y.^2 + z.^2);
+surf(x, y, z);
+view([10 10 10])
+xlabel 'x axis'
+ylabel 'y axis'
+zlabel 'z axis'
+title 'Plot of function x = sqrt(y^2 + z^2)'
+
+%%
+% *PROBLEM 4*
+%  Plot the surface y = 4 - x^2 with the view at (10, 10, 10).
+figure;
+syms x z;
+[x, z] = meshgrid(-5:0.1:5, -5:0.1:5);
+y = 4 - x.^2;
+surf(x, y, z);
+view([10 10 10])
+xlabel 'x axis'
+ylabel 'y axis'
+zlabel 'z axis'
+title 'Plot of surface y = 4 - x^2'
+
+%%
+% *PROBLEM 5*
+%  Find the partial derivative of [(sin(x^2*y))/y] with respect to y.
+syms x y;
+problem5 = diff(((sin((x^2)*y))/y), y)
+
+%%
+% *PROBLEM 6*
+%  Find the second partial derivative of (x^2 - y)/(x + y) with respect to
+%  y and then with respect to x.
+syms x y;
+problem6 = diff(diff((x^2 - y)/(x + y), y), x)
+
+%%
+% *PROBLEM 7*
+%  Find the gradient of f for f(x, y) = (xy)/(x^2*y + x + y)
+syms x y;
+problem7 = jacobian((x*y)/((x^2)*y + x + y), [x y])
+
+%%
+% *PROBLEM 8*
+%  Find the gradient of f at (-1, 0) for f(x, y) = 5x^3y^2 - y/x.
+syms x y;
+problem8 = subs(jacobian(5*(x^3)*(y^2) - y/x, [x y]), {x, y}, {-1, 0})
+
+%%
+% *PROBLEM 9*
+%  Find the directional derivative of g(x, y) = x^2 + y^3 at (1, -2) in the
+%  direction of a = 2i - 1j.
+syms x y;
+a = [2 -1];
+u = a/norm(a);
+problem9 = dot(u, subs(jacobian(x^2 + y^3, [x y]), {x, y}, {1, -2}))
+
+%%
+% *PROBLEM 10*
+%  Find all critical points for f(x, y) = (y - 2)ln(xy). Remember that ln
+%  in Matlab is log. On your printout, write the points as coordinate pairs
+%  next to the output.
+syms x y;
+f1 = (y - 2)*log(x*y);
+[xsoln1, ysoln1] = solve(jacobian(f1, [x y]))
+
+%  The critical point for f(x, y) is (1/2, 2).
+
+%%
+% *PROBLEM 11*
+%  Find all critical points for f(x, y) = x^3 + y^3 - 6xy. On your
+%  printout write the points as coordinate pairs next to the output.
+syms x y;
+f2 = x^3 + y^3 - 6*x*y;
+[xsoln2, ysoln2] = solve(jacobian(f2, [x y]))
+
+%  The critical points for f(x, y) are (0, 0), (2, 2), (3^(1/2)*i - 1,
+%  -3^(1/2)*i - 1), (-3^(1/2)*i - 1, 3^(1/2)*i - 1).
+
+%%
+% *PROBLEM 12*
+%  Use Lagrange multipliers to find the maximum and minimum values of f(x,
+%  y) = xy^2. Subject the constraint x^2 + y = 16. On your printout write a
+%  neat summary next to the output.
+syms x y L;
+f3 = x*y^2;
+g = x^2 + y - 16;
+firstpart = jacobian(f3, [x y]) - L*jacobian(g, [x y]);
+[Lsoln, xsoln3, ysoln3] = solve(firstpart, g)
+values = subs(f3, {x, y}, {xsoln3, ysoln3})
+
+%  As you can see, using Lagrange multipliers, the maximum value of f(x, y)
+%  is (16834*5^(1/2))/125 and the minimum value of f(x, y) is
+%  -(16834*5^(1/2))/125.
+
+
+##### SOURCE END #####
+--></body></html>

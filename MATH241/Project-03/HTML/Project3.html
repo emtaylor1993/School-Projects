@@ -1,0 +1,301 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Emmanuel Taylor</title><meta name="generator" content="MATLAB 8.4"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2014-12-04"><meta name="DC.source" content="Project3.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Emmanuel Taylor</h1><!--introduction--><p>MATLAB Project 3 MATH241 Section 0201 December 4, 2014</p><!--/introduction--><p><b>PROBLEM 1</b></p><pre>Plot the portion of x^2 + z^2 = 9 above the xy-plane and between y = -1
+and y = 2.</pre><pre class="codeinput">clear <span class="string">all</span>;
+syms <span class="string">y</span> <span class="string">theta</span>;
+rbar = [3*cos(theta), y, 3*sin(theta)];
+figure;
+ezsurf(rbar(1), rbar(2), rbar(3), [0, pi, -1, 2]);
+view([10 10 10]);
+xlabel <span class="string">'X Axis'</span>
+ylabel <span class="string">'Y Axis'</span>
+zlabel <span class="string">'Z Axis'</span>
+title <span class="string">'Graph of x^2 + z^2 = 9 above xy-plane and z between [-1 2]'</span>
+</pre><img vspace="5" hspace="5" src="Project3_01.png" alt=""> <p><b>PROBLEM 2</b></p><pre>Plot the portion of the cone z = 9 - sqrt(x^2 + y^2) inside the cylinder
+r = 2.</pre><pre class="codeinput">clear <span class="string">all</span>;
+syms <span class="string">r</span> <span class="string">theta</span>;
+rbar = [r*cos(theta), r*sin(theta), 9 - r];
+figure;
+ezsurf(rbar(1), rbar(2), rbar(3), [0, 2, 0, 2*pi]);
+view([10 10 10]);
+xlabel <span class="string">'X Axis'</span>
+ylabel <span class="string">'Y Axis'</span>
+zlabel <span class="string">'Z Axis'</span>
+title <span class="string">'Graph of cone z = 9 - sqrt(x^2 + y^2) with r between [0 2]'</span>
+</pre><img vspace="5" hspace="5" src="Project3_02.png" alt=""> <p><b>PROBLEM 3</b></p><pre>Plot the vector field F(x, y) = 0.2(x + y)i + 0.2(x - y)j using meshgrid
+(-5:1:5, -5:1:5).</pre><pre class="codeinput">clear <span class="string">all</span>;
+syms <span class="string">x</span> <span class="string">y</span>;
+figure;
+[x, y] = meshgrid(-5:1:5, -5:1:5);
+quiver(x, y, 0.2*(x + y), 0.2*(x - y), 0)
+axis <span class="string">tight</span>
+grid
+xlabel <span class="string">'X Axis'</span>
+ylabel <span class="string">'Y Axis'</span>
+title <span class="string">'Vector Field of F(x, y) = 0.2(x + y)i + 0.2(x - y)j'</span>
+</pre><img vspace="5" hspace="5" src="Project3_03.png" alt=""> <p><b>PROBLEM 4</b></p><pre>A piece of wire is in the shape of the circle x^2 + y^2 = 1. The density
+at any point is given by delta(x, y) = x^2 + y^4. Find the mass of the
+wire.</pre><pre class="codeinput">clear <span class="string">all</span>;
+syms <span class="string">x</span> <span class="string">y</span> <span class="string">z</span> <span class="string">t</span>;
+rbar = [sin(t), cos(t), 0];
+f = x^2 + y^4;
+mylength = @(u) sqrt(u * transpose(u));
+mag = simplify(mylength(diff(rbar, t)));
+sub = subs(f, [x, y, z], rbar);
+mass = int(sub * mag, t, 0, 2*pi)
+</pre><pre class="codeoutput"> 
+mass =
+ 
+(7*pi)/4
+ 
+</pre><p><b>PROBLEM 5</b></p><pre>Evaluate the line integral int(x + y)ds where C is the straight line
+segment from (0, 1, 1) to (3, 2, 2).</pre><pre class="codeinput">clear <span class="string">all</span>;
+syms <span class="string">x</span> <span class="string">y</span> <span class="string">z</span> <span class="string">t</span>;
+rbar = [t, t/3, t/3];
+f = x + y;
+mylength = @(u) sqrt(u * transpose(u));
+mag = simplify(mylength(diff(rbar, t)));
+sub = subs(f, [x, y, z], rbar);
+problem5 = int(sub * mag, t, 0, 3)
+</pre><pre class="codeoutput"> 
+problem5 =
+ 
+2*11^(1/2)
+ 
+</pre><p><b>PROBLEM 6</b></p><pre>Evaluate the line integral int yz*dx + yz*dy + y*dz where C is the top
+half of y^2 + z^2 = 4 in th yz=plane traveling from left to right.</pre><pre class="codeinput">clear <span class="string">all</span>;
+syms <span class="string">x</span> <span class="string">y</span> <span class="string">z</span> <span class="string">t</span>;
+rbar = [0, -2*cos(t), 2*sin(t)];
+f = [-4*cos(t)*sin(t), -4*cos(t)*sin(t), -2*cos(t)];
+sub = subs(f, [x, y, z], rbar);
+problem6 = int(dot(sub, diff(rbar, t)), 0, pi)
+</pre><pre class="codeoutput"> 
+problem6 =
+ 
+-2*pi
+ 
+</pre><p><b>PROBLEM 7</b></p><pre>Suppose sigma is the portion of the plane z = 10 - x - y inside the
+cylinder x^2 + y^2 = 1. The surface sigma is submerged in an electric
+field such that at any point the electric charge density is delta(x, y,
+z) = x^2 + y^2. Find hte total amount of electric charge on the surface.</pre><pre class="codeinput">clear <span class="string">all</span>;
+syms <span class="string">r</span> <span class="string">x</span> <span class="string">y</span> <span class="string">z</span> <span class="string">theta</span>;
+rbar = [r*cos(theta), r*sin(theta), 10 - r*cos(theta) - r*sin(theta)];
+f = x^2 + y^2;
+mylength = @(u) sqrt(u * transpose(u));
+mag = simplify(mylength(cross(diff(rbar, r), diff(rbar, theta))));
+sub = subs(f, [x, y, z], rbar);
+charge = int(int(sub * mag, r, 0, 1), theta, 0, 2*pi)
+</pre><pre class="codeoutput"> 
+charge =
+ 
+(pi*3^(1/2))/2
+ 
+</pre><p><b>PROBLEM 8</b></p><pre>A fluid is flowing through space following the vector field F(x, y, z) =
+yi - xj + zk. A filter is in the shape of the portion of the paraboloid
+z = x^2 + y^2 having 0 &lt;= x &lt;= 3 and 0 &lt;= y &lt;= 3, oriented inwards (and
+upwards). Find the rate at which the fluid is moving through the filter.</pre><pre class="codeinput">clear <span class="string">all</span>;
+syms <span class="string">x</span> <span class="string">y</span> <span class="string">z</span>;
+rbar = [x, y, x^2 + y^2];
+F = [y, -x, z];
+kross = simplify(cross(diff(rbar, x), diff(rbar, y)));
+sub = subs(F, [x, y, z], rbar);
+rate = int(int(dot(sub, kross), x, 0, 3), y, 0, 3)
+</pre><pre class="codeoutput"> 
+rate =
+ 
+54
+ 
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Emmanuel Taylor
+% MATLAB Project 3
+% MATH241 Section 0201
+% December 4, 2014
+
+%% 
+% *PROBLEM 1*
+%
+%  Plot the portion of x^2 + z^2 = 9 above the xy-plane and between y = -1
+%  and y = 2.
+clear all;
+syms y theta;
+rbar = [3*cos(theta), y, 3*sin(theta)];
+figure;
+ezsurf(rbar(1), rbar(2), rbar(3), [0, pi, -1, 2]);
+view([10 10 10]);
+xlabel 'X Axis'
+ylabel 'Y Axis'
+zlabel 'Z Axis'
+title 'Graph of x^2 + z^2 = 9 above xy-plane and z between [-1 2]'
+
+%%
+% *PROBLEM 2*
+%
+%  Plot the portion of the cone z = 9 - sqrt(x^2 + y^2) inside the cylinder
+%  r = 2.
+clear all;
+syms r theta;
+rbar = [r*cos(theta), r*sin(theta), 9 - r];
+figure;
+ezsurf(rbar(1), rbar(2), rbar(3), [0, 2, 0, 2*pi]);
+view([10 10 10]);
+xlabel 'X Axis'
+ylabel 'Y Axis'
+zlabel 'Z Axis'
+title 'Graph of cone z = 9 - sqrt(x^2 + y^2) with r between [0 2]'
+
+%%
+% *PROBLEM 3*
+%
+%  Plot the vector field F(x, y) = 0.2(x + y)i + 0.2(x - y)j using meshgrid
+%  (-5:1:5, -5:1:5).
+clear all;
+syms x y;
+figure;
+[x, y] = meshgrid(-5:1:5, -5:1:5);
+quiver(x, y, 0.2*(x + y), 0.2*(x - y), 0)
+axis tight
+grid
+xlabel 'X Axis'
+ylabel 'Y Axis'
+title 'Vector Field of F(x, y) = 0.2(x + y)i + 0.2(x - y)j'
+
+%%
+% *PROBLEM 4*
+%
+%  A piece of wire is in the shape of the circle x^2 + y^2 = 1. The density
+%  at any point is given by delta(x, y) = x^2 + y^4. Find the mass of the
+%  wire.
+clear all;
+syms x y z t;
+rbar = [sin(t), cos(t), 0];
+f = x^2 + y^4;
+mylength = @(u) sqrt(u * transpose(u));
+mag = simplify(mylength(diff(rbar, t)));
+sub = subs(f, [x, y, z], rbar);
+mass = int(sub * mag, t, 0, 2*pi)
+
+%%
+% *PROBLEM 5*
+%
+%  Evaluate the line integral int(x + y)ds where C is the straight line
+%  segment from (0, 1, 1) to (3, 2, 2).
+clear all;
+syms x y z t;
+rbar = [t, t/3, t/3];
+f = x + y;
+mylength = @(u) sqrt(u * transpose(u));
+mag = simplify(mylength(diff(rbar, t)));
+sub = subs(f, [x, y, z], rbar);
+problem5 = int(sub * mag, t, 0, 3)
+
+%%
+% *PROBLEM 6*
+%
+%  Evaluate the line integral int yz*dx + yz*dy + y*dz where C is the top
+%  half of y^2 + z^2 = 4 in th yz=plane traveling from left to right.
+clear all;
+syms x y z t;
+rbar = [0, -2*cos(t), 2*sin(t)];
+f = [-4*cos(t)*sin(t), -4*cos(t)*sin(t), -2*cos(t)];
+sub = subs(f, [x, y, z], rbar);
+problem6 = int(dot(sub, diff(rbar, t)), 0, pi)
+
+%%
+% *PROBLEM 7*
+%
+%  Suppose sigma is the portion of the plane z = 10 - x - y inside the
+%  cylinder x^2 + y^2 = 1. The surface sigma is submerged in an electric
+%  field such that at any point the electric charge density is delta(x, y,
+%  z) = x^2 + y^2. Find hte total amount of electric charge on the surface.
+clear all;
+syms r x y z theta;
+rbar = [r*cos(theta), r*sin(theta), 10 - r*cos(theta) - r*sin(theta)];
+f = x^2 + y^2;
+mylength = @(u) sqrt(u * transpose(u));
+mag = simplify(mylength(cross(diff(rbar, r), diff(rbar, theta))));
+sub = subs(f, [x, y, z], rbar);
+charge = int(int(sub * mag, r, 0, 1), theta, 0, 2*pi)
+
+%%
+% *PROBLEM 8*
+%
+%  A fluid is flowing through space following the vector field F(x, y, z) =
+%  yi - xj + zk. A filter is in the shape of the portion of the paraboloid
+%  z = x^2 + y^2 having 0 <= x <= 3 and 0 <= y <= 3, oriented inwards (and
+%  upwards). Find the rate at which the fluid is moving through the filter.
+clear all;
+syms x y z;
+rbar = [x, y, x^2 + y^2];
+F = [y, -x, z];
+kross = simplify(cross(diff(rbar, x), diff(rbar, y)));
+sub = subs(F, [x, y, z], rbar);
+rate = int(int(dot(sub, kross), x, 0, 3), y, 0, 3)
+##### SOURCE END #####
+--></body></html>
