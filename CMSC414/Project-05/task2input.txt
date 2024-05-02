@@ -1,0 +1,2 @@
+"Cookie: phpbb2mysql_t=a%3A1%3A%7Bi%3A1%3Bi%3A1415138914%3B%7D; phpbb2mysql_data=a%3A2%3A%7Bs%3A11%3A%22autologinid%22%3Bs%3A0%3A%22%22%3Bs%3A6%3A%22userid%22%3Bs%3A1%3A%223%22%3B%7D; phpbb2mysql_sid=a73a689d408c76256a1bd48cd27aec7b"
+phpbb2mysql_sid=a73a689d408c76256a1bd48cd27aec7b
