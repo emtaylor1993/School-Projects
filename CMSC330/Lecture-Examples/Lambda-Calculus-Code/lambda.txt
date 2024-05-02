@@ -1,0 +1,152 @@
+
+Lambda Calculus Examples 
+(Fun with Encodings)
+
+ABBREV: \ = lambda (i.e.,  \x.x = lambda x . x = identity function)
+
+NOTE: Some evaluation steps are not shown for brevity.
+
+-------------------------------------------------------------------------
+
+Problem 1 - Natural Numbers
+
+0 = \f.\y. y
+1 = \f.\y. f y
+2 = \f.\y. f (f y)
+...
+succ = \z.\f.\y. f (z f y)
+iszero = \g. g (\y. false) true
+plus = \m.\n.\x.\y. (m x) ((n x) y) 
+times = \m.\n.\f. m (n f)
+times2 = \m.\n. m (plus n) 0
+
+succ 1 ->
+(\z.\f.\y. f (z f y)) (\f.\y. f y) ->
+\f.\y. f ((\f.\y. f y) f y) ->
+\f.\y. f (f y) -> 2
+
+iszero 1 ->
+(\g. g (\y. false) true) (\f.\y. f y) ->
+(\f.\y. f y) (\y. false) true ->
+(\y. false) true -> false 
+
+iszero 2 ->
+(\g. g (\y. false) true) (\f.\y. f (f y)) ->
+(\f.\y. f (f y)) (\y. false) true ->
+(\y. false) ((\y. false) true) ->
+(\y. false) true -> false
+
+plus 1 2 -> 
+(\x.\y. (1 x) ((2 x) y)) ->
+(\x.\y. ((\f.\y. f y) x) (((\f.\y. f (f y)) x) y)) ->
+(\x.\y. (\y. x y) (x (x y))) ->
+\x.\y. x (x (x y)) -> 3
+
+times 2 2 ->
+(\m.\n.\f. m (n f)) 2 2 ->
+\f. 2 (2 f) ->
+\f. 2 ((\g.\y. g (g y)) f) ->
+\f. 2 (\y. f (f y)) ->
+\f. (\g.\z. g (g z)) (\y. f (f y)) ->
+\f.\z. (\y. f (f y)) ((\y. f (f y)) z) ->
+\f.\z. (\y. f (f y)) (f (f z)) ->
+\f.\z. f (f (f (f z))) ->
+
+times2 2 2 ->
+2 (plus 2) 0 ->
+(\f.\y. f (f y)) (plus 2) 0 ->
+(plus 2) ((plus 2) 0) ->
+(plus 2) 2 ->
+4
+
+-------------------------------------------------------------------------
+
+Problem 2 - Pairs
+
+pair = \x.\y.\f. f x y
+first = \p. p (\x.\y. x)
+second = \p. p (\x.\y. y)
+
+first (pair 1 2) ->
+(\p. p (\x.\y. x)) ((\x.\y.\f. f x y) 1 2) ->
+(\f. f 1 2) (\x.\y. x) ->
+(\x.\y. x) 1 2 -> 1
+
+second (pair 2 3) -> 
+(\p. p (\x.\y. y)) ((\x.\y.\f. f x y) 2 3) ->
+(\f. f 2 3) (\x.\y. y) ->
+(\x.\y. y) 2 3 -> 3
+
+-------------------------------------------------------------------------
+
+Problem 3 - Factorial
+
+Y = \f.(\x. f (x x)) (\x. f (x x))
+fact = \f.\n. if n = 0 then 1 else n * (f (n -1))
+
+(Y fact) 2 -> 
+(fact (Y fact)) 2 ->
+if 2 = 0 then 1 else 2 * ((Y fact) (2 - 1)) ->
+2 * ((Y fact) (2 - 1)) ->
+2 * ((fact (Y fact)) (2 - 1)) ->
+2 * (if 1 = 0 then 1 else 1 * ((Y fact) (n - 1))) ->
+2 * (1 * ((Y fact) (1 - 1))) ->
+2 * (1 * (fact (Y fact) (1 - 1))) ->
+2 * (1 * (if 0 = 0 then 1 else 0 * ((Y fact) (0 - 1)))) ->
+2 * 1 * 1 -> 2
+
+-------------------------------------------------------------------------
+
+Problem 4 - Lists
+
+cons = \x.\y.\m. m x y
+hd = \l. l true
+tl = \l. l false
+nil = \x. true
+nil? = \p. p (\x.\y. false)
+
+cons 1 nil ->
+(\x.\y.\m. m x y) 1 (\x. true) ->
+\m. m 1 (\x. true)
+
+hd (cons 1 nil) ->
+(\l. l true) (\m. 1 (\x. true)) ->
+(\m. m 1 (\x. true)) true ->
+true 1 (\x. true) -> 
+1
+
+cons 1 (cons 2 nil) ->
+(\x.\y.\m. m x y) 1 (\n. n 2 (\x. true)) ->
+\m. m 1 (\n. n 2 (\x. true)) 
+
+tl (cons 1 (cons 2 nil)) ->
+(\l. l false) (\m. m 1 (\n. n 2 (\x. true))) ->
+(\m. m 1 (\n. n 2 (\x. true))) false ->
+(\n. n 2 (\x. true)) 
+
+nil? nil ->
+(\p. p (\x.\y. false)) (\x. true) ->
+(\x. true) (\x.\y. false) ->
+true
+
+nil? (cons 1 nil) ->
+(\p. p (\x.\y. false)) (\m. m 1 (\x. true)) ->
+(\m. m 1 (\x. true)) (\x.\y. false) ->
+(\x.\y. false) 1 (\x. true) ->
+false
+
+map = \f.\g.\l if nil? l then nil else cons (g (hd x)) (f g (tl l))
+
+(Y map) succ (cons 1 (cons 2 nil)) ->
+
+let l = (cons 1 (cons 2 nil))
+
+(map (Y map)) succ (cons 1 (cons 2 nil)) ->
+if nil? l then nil else cons (succ (hd l)) ((Y map)  succ (tl l)) ->
+if nil? l then nil else cons 2 ((Y map) succ (cons 2 nil)) ->
+cons 2 ((Y map) succ (cons 2 nil)) ->
+cons 2 ((map (Y map)) succ (cons 2 nil)) ->
+cons 2 (if nil? (cons 2 nil) then nil else cons (succ 2) ((Y map) succ nil)) ->
+cons 2 (cons 3 ((map (Y map)) succ nil)) ->
+cons 2 (cons 3 (if nil? nil then nil else cons (nil ((\l. l false) (\x. true))))) 
+cons 2 (cons 3 nil)
