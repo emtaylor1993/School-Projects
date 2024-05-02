@@ -1,0 +1,13 @@
+After adding magic_quotes_gpc = On to the php.ini file, I
+attempted to carry out the same SQL Injection attack that was
+used for the previous tasks after adding a backslash before
+the single quote that appears before $username. After doing 
+this, the attack was unsuccessful. I believe this is because
+the magic_quotes_gpc = On makes it so were are unable to match
+the quote preventing us from logging in.
+
+Some drawbacks to using string escaping include the following: 
+Magic quotes can destroy data that isn't written unescaped to 
+a database. In a form (for example, a login form), magic quotes
+will escape the data entered if a form that hasn't been completed
+is shown again to the user.
