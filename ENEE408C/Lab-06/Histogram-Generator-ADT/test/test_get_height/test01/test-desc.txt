@@ -1,0 +1,10 @@
+------------------------------------------------------------------------
+Histogram Get Height Test 01:
+------------------------------------------------------------------------
+
+The purpose of this test was to check the basic functionality of the
+histogram get height test. For this test, we will test calling the 
+"histogram_get_height" method once and see if it will get the height as
+it should.
+
+Version: October 12, 2015

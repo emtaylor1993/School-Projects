@@ -1,0 +1,28 @@
+Tests started on:
+Wed Sep 23 02:07:15 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab03/verilog/histogram-bin-count/test/test01
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab03/verilog/histogram-bin-count/test/test01
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab03/verilog/histogram-bin-count/test/test02
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab03/verilog/histogram-bin-count/test/test02
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab03/verilog/histogram-bin-count/test/test03
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab03/verilog/histogram-bin-count/test/test03
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab03/verilog/histogram-bin-count/test/test04
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab03/verilog/histogram-bin-count/test/test04
+Tests completed on:
+Wed Sep 23 02:07:26 EDT 2015

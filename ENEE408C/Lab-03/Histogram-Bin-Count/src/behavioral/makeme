@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Build one module
+function makeone {
+	if ! [ -d ../../bin/behavioral ]; then
+		mkdir ../../bin/behavioral
+	fi
+	vlib ../../bin/behavioral
+	vmap work ../../bin/behavioral
+	vlog -work ../../bin/behavioral $1.v
+}
+
+# Build modules
+makeone behavioral_hist

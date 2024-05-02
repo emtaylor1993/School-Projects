@@ -1,0 +1,10 @@
+-------------------------------------------------
+Histogram Set Width Test 03:
+-------------------------------------------------
+
+The purpose of this test was the check the basic functionality of the
+histogram set width test. For this test, we will test calling the
+"histogram_set_width" within a loop and setting a different width each
+time.
+
+Version: October, 12, 2015

@@ -1,0 +1,11 @@
+Test 01: Full Adder
+
+This test will validate the functionality of the full adder for the following
+set of inputs of the format (Carry-in, A, B):
+
+(0, 0, 1)
+(0, 0, 0)
+(1, 1, 0)
+(0, 1, 1)
+
+This test uses the standard comparison between correct-output.txt and out.txt.

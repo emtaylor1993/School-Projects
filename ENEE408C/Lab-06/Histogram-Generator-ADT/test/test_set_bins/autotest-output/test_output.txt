@@ -1,0 +1,28 @@
+Tests started on:
+Thu Oct 15 17:46:03 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_bins/test01
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_bins/test01
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_bins/test02
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_bins/test02
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_bins/test03
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_bins/test03
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_bins/test04
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_bins/test04
+Tests completed on:
+Thu Oct 15 17:46:06 EDT 2015

@@ -1,0 +1,1 @@
+Error: Stride should be greater than 0.

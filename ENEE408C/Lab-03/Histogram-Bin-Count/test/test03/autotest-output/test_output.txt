@@ -1,0 +1,10 @@
+Tests started on:
+Wed Sep 23 01:57:33 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab03/verilog/histogram-bin-count/test/test03
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab03/verilog/histogram-bin-count/test/test03
+Tests completed on:
+Wed Sep 23 01:57:35 EDT 2015

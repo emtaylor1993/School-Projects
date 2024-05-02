@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Script to run a single test
+# Usage: runtest [no arguments]
+
+./driver.exe >out.txt
+cat out.txt

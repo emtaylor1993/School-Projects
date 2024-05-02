@@ -1,0 +1,7 @@
+Histogram Validate Bins Test01:
+
+The purpose of this test was to check basic functionality of the histogram
+validate bins test. A perfectly fine list of bins was input so the test should
+pass.
+
+Version: 10/06/2015

@@ -1,0 +1,11 @@
+
+Testing the "histgen_set_bins" function...
+
+Bins to be set: {1, 2, 3, 4}
+
+Method call complete...
+
+Printing the bins...
+[1 - 2]
+[3 - 4]
+

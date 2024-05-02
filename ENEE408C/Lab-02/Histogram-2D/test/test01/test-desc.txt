@@ -1,0 +1,4 @@
+Test 01
+
+This is the first of the two tests that were given to us for the lab. It tests
+reading/writing to and from files.

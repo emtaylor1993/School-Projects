@@ -1,0 +1,11 @@
+--------------------------------------------------------------------------
+Histogram Switch Bins Test 02:
+--------------------------------------------------------------------------
+
+The purpose of this test was to check the basic functionality of the
+histogram switch bins test. For this test, we will test calling the
+"histogram_switch_bins" method once and see if it will return the correct
+return value.
+
+Version: October 15, 2015
+

@@ -1,0 +1,5 @@
+Test count: 1; test failures: 1; error output mismatches: 1
+Test failures: 
+/homes/etaylor5/enee408c_user/labs/lab06/c/reference-code/list-adts/test/test_array_list/test_insert/test03
+Error comparison failures: 
+/homes/etaylor5/enee408c_user/labs/lab06/c/reference-code/list-adts/test/test_array_list/test_insert/test03

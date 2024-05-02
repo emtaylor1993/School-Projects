@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+
+
+# Script to run this test
+# Usage: runme [no arguments]
+
+# [FIXME: complete this script, this is just a template]
+
+./driver.exe out.txt > diagnostics.txt
+cat out.txt

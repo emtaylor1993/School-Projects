@@ -1,0 +1,4 @@
+Test 02
+
+This test is the second of the two that were given to use during the lab. It
+tests reading/writing from files.

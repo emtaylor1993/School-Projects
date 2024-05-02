@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Script to remove selected files associated with this project.
+
+lxprog=cleanme
+
+if [ $# -ne 0 ]; then
+	echo $lxprog error: arg count
+	exit 1
+fi
+
+rm *.o;
+
+echo cleaning up generated files from C code compilation
+dlccleantree
+
+echo $lxprog complete

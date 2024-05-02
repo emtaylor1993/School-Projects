@@ -1,0 +1,11 @@
+
+Histogram Set Bins Test01:
+
+The purpose of this test was to check basic functionality of the histogram
+adt program. The test begins by initializing an array of bins with random
+numbers. After this, we will set the bins with an array where the max is not
+the final element of the list. This will cause the validate method to report
+a message stating that the array is not sorted in order.
+
+Version: 10/08/2015
+

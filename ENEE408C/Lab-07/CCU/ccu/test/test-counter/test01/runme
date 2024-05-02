@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Script to run this test
+# Usage: runme [no arguments]
+
+UXLIB=../../../bin/counter
+
+if [ -f out.txt ]; then
+	rm -r out.txt
+fi
+
+vsim -c -L "$UXLIB" -lic_plus -quiet -novopt -do simulate-do testbench > transcript
+cat out.txt

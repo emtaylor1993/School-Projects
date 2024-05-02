@@ -1,0 +1,4 @@
+Test 02: Behavioral Histogram
+
+In this test, we test the functionality of the behavioral histogram verilog
+module. This is done using the "diff out.txt correct-out1.txt" approach.

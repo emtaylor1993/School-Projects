@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Build one module
+function makeone {
+	if ! [ -d ../../bin/ccu ]; then
+		mkdir ../../bin/ccu
+	fi
+	vlib ../../bin/ccu
+	vmap work ../../bin/ccu
+	vlog -work ../../bin/ccu $1.v
+}
+
+# Build modules
+makeone ccu
+makeone adder
+makeone mux
+makeone counter

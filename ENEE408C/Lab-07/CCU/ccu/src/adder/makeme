@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Build one module
+function makeone {
+	if ! [ -d ../../bin/adder ]; then
+		mkdir ../../bin/adder
+	fi
+	vlib ../../bin/adder
+	vmap work ../../bin/adder
+	vlog -work ../../bin/adder $1.v
+}
+
+# Build modules
+makeone adder

@@ -1,0 +1,7 @@
+
+Testing the "histgen_get_height" function...
+Method call complete...
+
+The value returned was: 3
+Test 01: Get Height passed!
+

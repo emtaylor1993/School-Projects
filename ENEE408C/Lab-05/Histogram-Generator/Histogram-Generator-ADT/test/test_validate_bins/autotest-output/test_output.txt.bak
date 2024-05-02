@@ -1,0 +1,23 @@
+Tests started on:
+Thu Oct  8 13:54:19 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_validate_bins/test01
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_validate_bins/test01
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_validate_bins/test02
+Files ../correct-output.txt and output.txt differ
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_validate_bins/test02
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_validate_bins/test03
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_validate_bins/test03
+Tests completed on:
+Thu Oct  8 13:54:21 EDT 2015

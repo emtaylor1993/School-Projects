@@ -1,0 +1,1 @@
+Error: Width should be smaller than stride.

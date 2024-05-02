@@ -1,0 +1,10 @@
+
+Histogram Set Bins Test01:
+
+The purpose of this test was to check basic functionality of the histogram
+set bins function. First, the array of bins is initialized randomly. Next,
+A normal set of bins and a normal number of bins and the results should be
+printed out. This test should pass.
+
+Version: 10/08/2015
+

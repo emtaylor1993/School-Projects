@@ -1,0 +1,4 @@
+Test 04: Structural Histogram
+
+In this test, we test the functionality of the structural histogram verilog
+module. This is done using the "diff out.txt correct-out1.txt" approach.

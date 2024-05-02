@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Script to configure this project
+
+dlcincludepath="-I. -I../../src"
+dlclibs="../../src/basic_lib.a"
+dlctargetfile="driver.exe"
+dlcinstalldir="$LIDECGEN"
+dlcobjs="driver.o"
+dlcverbose=""

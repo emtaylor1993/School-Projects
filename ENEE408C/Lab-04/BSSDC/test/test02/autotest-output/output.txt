@@ -1,0 +1,2 @@
+led_A: 1, led_B: 1, led_C: 0, led_D: 1, led_E: 1, led_F: 0, led_G: 1, in: 010
+led_A: 1, led_B: 1, led_C: 1, led_D: 1, led_E: 0, led_F: 0, led_G: 1, in: 011

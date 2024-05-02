@@ -1,0 +1,10 @@
+------------------------------------------------------------------------
+Histogram Get Height Test 03:
+------------------------------------------------------------------------
+
+The purpose of this test was to check the basic functionality of the
+histogram get height test. For this test, we will test calling the 
+"histogram_get_height" method after an invalid set call for width. This should
+still work because height is independent of stride.
+
+Version: October 12, 2015

@@ -1,0 +1,22 @@
+#Copyright notice: Copyright 1997-2010 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+
+ovf_setup -ungroup_separator { _ }
+
+ovf_transform \
+-module { counter } \
+-type { tree } \
+-internal_type { 206 } \
+-internal_index { 4 } \
+-input { 2 add_22_13.A } \
+-output { 2 O1 } \
+-from { \
+   { 2 add_22_13 : UADD { { add_22_13.A } { 'b1 ZERO 2 } } } \
+   { O1 = { add_22_13.1 } } } \
+-to { \
+   { 2 inc_add_22_13_1 : UINC { { add_22_13.A } { 'b1 ZERO 2 } } } \
+   { O1 = { inc_add_22_13_1.1 } } }
+
+ovf_uniquify \
+-module { ccu } \
+{ { m2 mux mux_1 } } 

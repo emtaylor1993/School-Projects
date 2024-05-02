@@ -1,0 +1,7 @@
+Histogram Print Bins Test01:
+
+The purpose of this test was to check basic functionality of the histogram
+print bins test. A list of bins the is valid is passed in to the function.
+The function should print out 4 rows of bins that are valid.
+
+Version: 10/08/2015

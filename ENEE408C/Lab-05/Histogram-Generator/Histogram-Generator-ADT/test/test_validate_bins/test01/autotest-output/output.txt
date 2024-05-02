@@ -1,0 +1,4 @@
+Validating bins...
+Validate complete.
+Value returned: 1
+Test 01: Validation passed!

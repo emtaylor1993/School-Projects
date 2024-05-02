@@ -1,0 +1,29 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 d/homes/etaylor5/enee408c_user/labs/lab08/verilog/ccu/test/test-ccu/test01
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+vtestbench
+V`JN@9S9cnhjKRR_L]QIcM3
+r1
+!s85 0
+31
+!s100 h4d][IgRiMFZ^:W`JVK971
+I]AaN9VCX=Ek4E@BjcDj;D1
+Z1 d/homes/etaylor5/enee408c_user/labs/lab08/verilog/ccu/test/test-ccu/test01
+w1446071643
+8testbench.v
+Ftestbench.v
+L0 3
+OL;L;10.2c;57
+!s90 testbench.v|
+o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s108 1446071951.312920
+!s107 testbench.v|
+!i111 0

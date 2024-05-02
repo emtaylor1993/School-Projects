@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------
+Histogram Print Bins Test 04:
+-------------------------------------------------------------------------
+
+The purpose of this test was to check the basic functionality of the
+histogram print bins test. For this test, we will test calling the 
+"histogram_print_bins" method once and see if it will print a simple
+set of bins. This time, we will print an invalid set of bins and have
+an error message display.
+
+Version: 10/15/2015
+

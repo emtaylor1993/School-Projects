@@ -1,0 +1,9 @@
+-----------------------------------------------------------------
+Histogram Compute Test 01:
+-----------------------------------------------------------------
+
+The purpose of this test was to check the basic functionality of the
+histogram compute test. For this test, we will simply compute the histogram
+of a simple set of bins.
+
+Version: October 15, 2015

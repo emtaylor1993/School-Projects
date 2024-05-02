@@ -1,0 +1,9 @@
+Clk: 0, Reset: 0, Out: 0
+Clk: 1, Reset: 1, Out: 0
+Clk: 0, Reset: 0, Out: 0
+Clk: 1, Reset: 1, Out: 0
+Clk: 0, Reset: 0, Out: 0
+Clk: 1, Reset: 0, Out: 1
+Clk: 0, Reset: 0, Out: 1
+Clk: 1, Reset: 0, Out: 2
+Clk: 0, Reset: 0, Out: 2

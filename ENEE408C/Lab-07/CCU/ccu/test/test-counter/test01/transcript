@@ -1,0 +1,6 @@
+# vsim -L ../../../bin/counter -do simulate-do -c -lic_plus -quiet -novopt testbench 
+# Refreshing /afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/test/test-counter/test01/work.testbench
+# do simulate-do 
+# ** Note: $finish    : testbench.v(26)
+#    Time: 35 ns  Iteration: 0  Instance: /testbench
+on: 0  Instance: /testbench

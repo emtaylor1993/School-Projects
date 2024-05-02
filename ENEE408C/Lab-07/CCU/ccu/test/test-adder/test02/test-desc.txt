@@ -1,0 +1,7 @@
+
+Test 02: 2-Bit Adder Module
+
+In this test, we test the functionality of the 2-bit adder module. This is
+done using the "cat out.txt" approach. We will add a 1 bit number and a 2
+bit number.
+

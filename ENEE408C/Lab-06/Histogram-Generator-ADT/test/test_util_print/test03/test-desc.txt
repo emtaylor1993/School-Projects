@@ -1,0 +1,9 @@
+----------------------------------------------------------------------
+Histogram Util Print Test 03:
+----------------------------------------------------------------------
+
+The purpose of this test was to check the basic functionality of the
+histogram util print test. For this test, we will test calling the
+"histogram_util_print" method on a simple set of bins.
+
+Version: October 15, 2015

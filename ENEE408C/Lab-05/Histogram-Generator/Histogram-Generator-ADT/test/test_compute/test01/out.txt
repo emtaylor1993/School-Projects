@@ -1,0 +1,15 @@
+
+Preparing to compute...
+
+Array of bins:
+[1 - 2]
+[3 - 4]
+[5 - 6]
+
+Computing:
+Bin 1: 2
+Bin 2: 1
+Bin 3: 3
+
+Compute complete.
+

@@ -1,0 +1,5 @@
+# vsim -L ../../bin -do simulate-do -c -lic_plus -quiet -novopt lab04_test 
+# Refreshing /afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab04/verilog/bssdc/test/test04/work.lab04_test
+# do simulate-do 
+ab04_test
+# do simulate-do 

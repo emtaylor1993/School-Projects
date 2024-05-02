@@ -1,0 +1,11 @@
+Tests started on:
+Thu Oct 15 18:40:16 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_print_bins/test02
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_print_bins/test02
+Files ../expected-errors.txt and error_output.txt differ
+Tests completed on:
+Thu Oct 15 18:40:17 EDT 2015

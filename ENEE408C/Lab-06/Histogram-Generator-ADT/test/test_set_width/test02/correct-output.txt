@@ -1,0 +1,7 @@
+
+Testing the "histgen_set_width" function...
+Value of width before calling: 2.
+Method call complete...
+Value of width after calling: 4.
+Test 02: Set Width passed!
+

@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+lxprog=makeme
+lxlib=libdemo
+
+function makeone {
+	local lxarg=""
+	if [ $# -ne 1 ]; then
+		echo $lxprog error: arg count
+		return 1
+	fi
+
+	lxarg="$1"
+	rm -f "$lxarg".o
+	gcc -c -Wall -pedantic "$lxarg".c
+	if ! [ -f "$lxarg".o ]; then
+		# Exit from the enclosing script if no .o file was produced
+		exit 1
+	fi
+}
+
+makeone histgen
+makeone array_list
+makeone list
+
+ar -cr "$lxlib.a" histgen.o array_list.o list.o
+ranlib "$lxlib.a"
+
+if [ -f "$lxlib.a" ]; then
+	mv "$lxlib.a" ../bin
+fi

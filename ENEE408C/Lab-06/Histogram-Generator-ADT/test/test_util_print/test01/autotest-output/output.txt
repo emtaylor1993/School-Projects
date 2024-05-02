@@ -1,0 +1,7 @@
+
+Testing the "histgen_util_print" method...
+[1 - 2]:		2
+[3 - 4]:		2
+
+Test Hist Util Print Histogram Passed!
+

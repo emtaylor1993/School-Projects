@@ -1,0 +1,4 @@
+
+Testing the "histgen_get_max_bin_count" function...
+Test 04: Get Max Bin Count passed!
+

@@ -1,0 +1,10 @@
+-------------------------------------------------
+Histogram Set Max Bin Count Test 01:
+-------------------------------------------------
+
+The purpose of this test was the check the basic functionality of the
+histogram set max bin count test. For this test, we will test calling the
+"histogram_set_max_bin_count" method once and see if it will set the max bin
+count as it should.
+
+Version: October 15, 2015

@@ -1,0 +1,7 @@
+
+Testing the "histgen_switch_bins" function...
+
+Method call complete...
+
+Switch Bins passed.
+

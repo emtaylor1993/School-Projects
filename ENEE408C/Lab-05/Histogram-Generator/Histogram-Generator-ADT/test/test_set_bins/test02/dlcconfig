@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# No configurations are needed here, but we define the file
+# here so that this subdirectory is processed by utilities
+# like dlccleantree.

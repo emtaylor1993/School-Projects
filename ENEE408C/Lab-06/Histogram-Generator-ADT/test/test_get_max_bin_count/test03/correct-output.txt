@@ -1,0 +1,7 @@
+
+Testing the "histgen_get_max_bin_count" function...
+Method call complete...
+
+The value returned was: 3000
+Test 03: Get Max Bin Count passed!
+

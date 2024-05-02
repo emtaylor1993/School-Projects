@@ -1,0 +1,6 @@
+# vsim -L ../../bin/structural -do simulate-do -c -lic_plus -quiet -novopt testbench 
+# Refreshing /afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab03/verilog/histogram-bin-count/test/test03/work.testbench
+# Refreshing /afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab03/verilog/histogram-bin-count/bin/structural.structural_hist
+# do simulate-do 
+ural_hist
+# do simulate-do 

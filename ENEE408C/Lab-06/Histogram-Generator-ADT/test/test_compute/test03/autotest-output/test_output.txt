@@ -1,0 +1,10 @@
+Tests started on:
+Fri Oct 16 00:35:27 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_compute/test03
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_compute/test03
+Tests completed on:
+Fri Oct 16 00:35:27 EDT 2015

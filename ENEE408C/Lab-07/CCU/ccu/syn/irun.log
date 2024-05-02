@@ -1,0 +1,34 @@
+irun: *W,BADPRF: The linedebug option may have an adverse performance impact.
+module adder(A, B, Sum, Cout);
+           |
+ncvlog: *W,RECOME (/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/adder.v,5|11): recompiling design unit worklib.adder:v.
+	First compiled from line 5 of /afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/adder.v.
+module ccu(clk, reset, A, B, sum, cout);
+         |
+ncvlog: *W,RECOME (/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/ccu.v,3|9): recompiling design unit worklib.ccu:v.
+	First compiled from line 3 of /afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/ccu.v.
+module counter(clk, reset, out);
+             |
+ncvlog: *W,RECOME (/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/counter.v,5|13): recompiling design unit worklib.counter:v.
+	First compiled from line 5 of /afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/counter.v.
+module mux(Select, X, Y, Out);
+         |
+ncvlog: *W,RECOME (/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/mux.v,3|9): recompiling design unit worklib.mux:v.
+	First compiled from line 3 of /afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/mux.v.
+ncvlog: *W,LIBNOU: Library "/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/testbench.v" given but not used.
+	Top level design units:
+		testbench
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /dept/enee/software/cadenceIC6/linux/inst/INCISIV/tools/inca/files/ncsimrc
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm testbench.uut.A testbench.uut.B testbench.uut.clk testbench.uut.count testbench.uut.cout testbench.uut.m_out1 testbench.uut.m_out2 testbench.uut.reset testbench.uut.rst testbench.uut.sum
+Created probe 1
+ncsim> run
+Simulation complete via $finish(1) at time 25 NS + 0
+./testbench.v:28 		#25 $finish;
+ncsim> ^C
+ncsim> exit

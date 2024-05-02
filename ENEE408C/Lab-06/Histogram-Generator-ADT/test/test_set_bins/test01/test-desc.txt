@@ -1,0 +1,9 @@
+------------------------------------------------------
+Histogram Set Bins Test 01:
+------------------------------------------------------
+
+The purpose of this test was to check the basic functionality of the
+histogram set bins test. For this test, we will test calling the 
+"histogram_set_bins" method normally and see if the bins are actually set.
+
+Version: October 13, 2015

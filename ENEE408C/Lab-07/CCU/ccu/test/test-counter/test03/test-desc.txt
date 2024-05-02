@@ -1,0 +1,7 @@
+
+Test 01: Counter Module
+
+In this test, we test the functionality of the counter module. This is done
+using the "cat out.txt" approach. We will simply see if the counter correctly
+increments itself.
+

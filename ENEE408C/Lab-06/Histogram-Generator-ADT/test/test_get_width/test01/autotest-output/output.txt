@@ -1,0 +1,7 @@
+
+Testing the "histgen_get_width" function...
+Method call complete...
+
+The value returned was: 4
+Test 01: Get Width passed!
+

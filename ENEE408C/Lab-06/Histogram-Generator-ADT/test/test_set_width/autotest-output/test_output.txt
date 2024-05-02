@@ -1,0 +1,34 @@
+Tests started on:
+Thu Oct 15 19:18:36 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_width/test01
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_width/test01
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_width/test02
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_width/test02
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_width/test03
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_width/test03
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_width/test04
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_width/test04
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_width/test05
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_width/test05
+Tests completed on:
+Thu Oct 15 19:18:41 EDT 2015

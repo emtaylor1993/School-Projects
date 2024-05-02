@@ -1,0 +1,10 @@
+-------------------------------------------------
+Histogram Set Stride Test 05:
+-------------------------------------------------
+
+The purpose of this test was the check the basic functionality of the
+histogram set stride test. For this test, we will test calling the
+"histogram_set_stride" method with a stride that is shorter than the width
+of the histogram.
+
+Version: October, 12, 2015

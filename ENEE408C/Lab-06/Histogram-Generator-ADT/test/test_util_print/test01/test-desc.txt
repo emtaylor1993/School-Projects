@@ -1,0 +1,9 @@
+---------------------------------------------------------------
+Hist Util Print Test 01:
+---------------------------------------------------------------
+
+The purpose of this test was to check the basic functionality of the util
+print histogram function. For this test, we tested calling the hist util
+print function on a simply set of bins and printing the result.
+
+Version: October 15, 2015

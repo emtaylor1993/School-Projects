@@ -1,0 +1,10 @@
+-------------------------------------------------
+Histogram Set Width Test 05:
+-------------------------------------------------
+
+The purpose of this test was the check the basic functionality of the
+histogram set width test. For this test, we will test calling the
+"histogram_set_width" method with a width that is smaller than the stride
+of the histogram.
+
+Version: October, 12, 2015

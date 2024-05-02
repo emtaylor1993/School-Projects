@@ -1,0 +1,5 @@
+length before: 0
+length after: 1
+displaying the list ...
+Element 0: 0
+... finished displaying the list. 

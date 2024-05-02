@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Script to build the executable for this test
+# Usage: makeme [no arguments]
+
+# Script to build this test.
+
+if ! [ -d work ]; then
+	vlib work
+	vmap work work
+fi
+
+vlog testbench.v

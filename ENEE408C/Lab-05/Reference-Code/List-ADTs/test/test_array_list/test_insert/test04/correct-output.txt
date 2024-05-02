@@ -1,0 +1,3 @@
+length before: 0
+length after: 1
+NULL pointer at Index 0.

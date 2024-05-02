@@ -1,0 +1,11 @@
+Tests started on:
+Thu Oct 15 19:05:14 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_width/test01
+Files ../correct-output.txt and output.txt differ
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab06/c/histgen-adt/test/test_set_width/test01
+Tests completed on:
+Thu Oct 15 19:05:15 EDT 2015

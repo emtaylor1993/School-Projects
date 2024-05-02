@@ -1,0 +1,8 @@
+
+Histogram Compute Test03:
+
+The purpose of this test was to check basic functionality of the histogram
+compute function. We will input a large array and only take a small tile
+of observations. The results will be printed on screen.
+
+Version: 10/09/2015

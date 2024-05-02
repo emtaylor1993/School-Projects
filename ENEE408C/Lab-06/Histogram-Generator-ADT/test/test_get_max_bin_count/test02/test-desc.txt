@@ -1,0 +1,11 @@
+------------------------------------------------------------------------
+Histogram Get Max Bin Count Test 02:
+------------------------------------------------------------------------
+
+The purpose of this test was to check the basic functionality of the
+histogram get max bin count test. For this test, we will test calling the 
+"histogram_get_max_bin_count method once and see if it will get the width as
+it should. The key difference here, is that we will call the getter method
+with a negative value.
+
+Version: October 12, 2015

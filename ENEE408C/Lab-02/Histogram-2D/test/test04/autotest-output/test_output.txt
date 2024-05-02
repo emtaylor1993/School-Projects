@@ -1,0 +1,10 @@
+Tests started on:
+Fri Sep 11 01:50:03 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab02/c/hist_2d/test/test02
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab02/c/hist_2d/test/test02
+Tests completed on:
+Fri Sep 11 01:50:04 EDT 2015

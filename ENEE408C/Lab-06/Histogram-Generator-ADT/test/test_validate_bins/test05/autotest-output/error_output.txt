@@ -1,0 +1,1 @@
+The final element of the bins list is not the max.

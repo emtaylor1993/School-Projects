@@ -1,0 +1,20 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/adder.v
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/ccu.v
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/counter.v
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/mux.v
+-v
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/testbench.v
+-s
++gui
++linedebug
++access+rwc
+-q
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/adder.v
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/ccu.v
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/counter.v
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/mux.v
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/testbench.v

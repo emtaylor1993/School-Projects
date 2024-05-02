@@ -1,0 +1,10 @@
+-------------------------------------------------
+Histogram Set Stide Test 02:
+-------------------------------------------------
+
+The purpose of this test was the check the basic functionality of the
+histogram set stride test. For this test, we will test calling the
+"histogram_set_stride" method and check for an error that occurs when
+we try to set the stride with a negative value. 
+
+Version: October, 12, 2015

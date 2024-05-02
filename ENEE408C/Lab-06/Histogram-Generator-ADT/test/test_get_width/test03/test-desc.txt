@@ -1,0 +1,10 @@
+------------------------------------------------------------------------
+Histogram Get Width Test 03:
+------------------------------------------------------------------------
+
+The purpose of this test was to check the basic functionality of the
+histogram get width test. For this test, we will test calling the 
+"histogram_get_width" method after an invalid set call. This should
+throw an error message to stderr. 
+
+Version: October 12, 2015

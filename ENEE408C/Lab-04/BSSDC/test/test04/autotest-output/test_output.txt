@@ -1,0 +1,10 @@
+Tests started on:
+Thu Sep 24 15:55:37 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab04/verilog/bssdc/test/test04
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab04/verilog/bssdc/test/test04
+Tests completed on:
+Thu Sep 24 15:55:39 EDT 2015

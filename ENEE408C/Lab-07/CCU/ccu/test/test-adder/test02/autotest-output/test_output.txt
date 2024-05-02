@@ -1,0 +1,10 @@
+Tests started on:
+Wed Oct 28 01:11:05 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab08/verilog/ccu/test/test-adder/test02
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab08/verilog/ccu/test/test-adder/test02
+Tests completed on:
+Wed Oct 28 01:11:24 EDT 2015

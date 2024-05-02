@@ -1,0 +1,4 @@
+Validating bins...
+Validate complete.
+Value returned: 0
+Test 02: Validation failed.

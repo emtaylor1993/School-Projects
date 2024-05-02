@@ -1,0 +1,10 @@
+Tests started on:
+Thu Oct  8 15:33:33 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_set_bins/test02
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_set_bins/test02
+Tests completed on:
+Thu Oct  8 15:33:34 EDT 2015

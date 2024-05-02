@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+############################################################################
+# Script to clean up the entire project directory getting rid of certain
+# kinds of generated files and directories.
+############################################################################
+
+# Script to remove selected files associated with this project.
+
+lxprog=cleanme
+
+if [ $# -ne 0 ]; then
+	echo $lxprog error: arg count
+	exit 1
+fi
+
+rm -f makeme-out.txt
+rm -f makeme-errors.txt
+rm -f misspelled.txt
+rm -f ../bin/*.o
+rm -f *.o
+cd ..
+
+echo cleaning up generated files from C code compilation
+dlccleantree
+
+echo $lxprog complete

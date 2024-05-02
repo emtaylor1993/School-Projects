@@ -1,0 +1,7 @@
+
+Testing the "histgen_get_stride" function...
+Method call complete...
+
+The value returned was: 10
+Test 01: Get Stride passed!
+

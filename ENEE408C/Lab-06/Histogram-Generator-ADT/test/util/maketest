@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Common script to build a single test.
+
+lxprog=maketest
+
+if [ -z "$DLXPROJSRC" ]; then
+	echo $lxprog error: DLXPROJSRC variable is not set
+	exit 1;
+fi
+
+# We remove the pedantic option below because it can result in obsolete
+# warnings related to use of variable-argument macros.
+gcc -c -Wall -I"$DLXPROJSRC" driver.c
+
+gcc -Wall -pedantic -o driver.exe driver.o "$DLXPROJSRC"/../bin/libdemo.a

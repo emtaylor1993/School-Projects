@@ -1,0 +1,8 @@
+
+Histogram Util Print Test03:
+
+The purpose of this test was to check basic functionality of the histogram
+computefunction. This test will try to print a histogram when some of the
+observations are out of range.
+
+Version: 10/09/2015

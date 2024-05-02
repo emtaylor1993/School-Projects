@@ -1,0 +1,5 @@
+
+Testing the "histgen_compute" method...
+
+Test Compute Passed!
+

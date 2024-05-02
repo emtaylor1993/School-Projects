@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Build one module
+function makeone {
+	if ! [ -d ../bin ]; then
+		mkdir ../bin
+	fi
+	vlib ../bin
+	vmap work ../bin
+	vlog -work ../bin $1.v
+}
+
+# Build modules
+makeone bssdc

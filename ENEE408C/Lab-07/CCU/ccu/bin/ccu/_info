@@ -1,0 +1,86 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 d/homes/etaylor5/enee408c_user/labs/lab08/verilog/ccu/src/ccu
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+vadder
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+!s85 0
+31
+IBb3<A5M4fWIb`aoWH7h5l1
+Z2 d/homes/etaylor5/enee408c_user/labs/lab08/verilog/ccu/src/ccu
+w1446067820
+8adder.v
+Fadder.v
+L0 5
+Z3 OL;L;10.2c;57
+Z4 o-work ../../bin/ccu -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 3BjW0RPeF?F=Fd[5TOZF<0
+!s108 1446071320.712088
+!s107 adder.v|
+!s90 -work|../../bin/ccu|adder.v|
+!i111 0
+vccu
+R1
+r1
+31
+II]>?mKO_j[l:EFQ]gG<G<3
+R2
+w1446070885
+8ccu.v
+Fccu.v
+L0 3
+R3
+R4
+!s85 0
+!i10b 1
+!s100 =YVDP144?<6Bi`c@4VM:a0
+!s108 1446071320.319992
+!s107 ccu.v|
+!s90 -work|../../bin/ccu|ccu.v|
+!i111 0
+vcounter
+R1
+r1
+31
+ICBkl38Yf?ef_DmAYMP01G0
+R2
+w1446071319
+8counter.v
+Fcounter.v
+L0 5
+R3
+R4
+!s85 0
+!i10b 1
+!s100 kQ5;Vd4XhMRENZI7PCbPE3
+!s108 1446071321.522917
+!s107 counter.v|
+!s90 -work|../../bin/ccu|counter.v|
+!i111 0
+vmux
+R1
+r1
+31
+IVU7fC<Pk[ObiL[d5GLVY`3
+R2
+w1446018936
+8mux.v
+Fmux.v
+L0 3
+R3
+R4
+!s85 0
+!i10b 1
+!s100 iF`Y[h2DG:NdMYO]S]j]E1
+!s108 1446071321.109495
+!s107 mux.v|
+!s90 -work|../../bin/ccu|mux.v|
+!i111 0

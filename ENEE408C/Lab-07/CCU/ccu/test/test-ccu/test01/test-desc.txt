@@ -1,0 +1,7 @@
+
+Test 01: CCU Module
+
+In this test, we test the functionality of the entire CCU module. This is
+done using the "cat out.txt" approach.
+
+

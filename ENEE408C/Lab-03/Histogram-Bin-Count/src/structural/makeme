@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Build one module
+function makeone {
+	if ! [ -d ../../bin/structural ]; then
+		mkdir ../../bin/structural
+	fi
+	vlib ../../bin/structural
+	vmap work ../../bin/structural
+	vlog -work ../../bin/structural $1.v
+}
+
+# Build modules
+makeone structural_hist

@@ -1,0 +1,14 @@
+
+Preparing to set bins...
+
+Array of bins before calling set_bins:
+[4 - 5]
+[3 - 1]
+
+Array of bins after calling set_bins:
+[0 - 1]
+[2 - 3]
+
+Set complete.
+Test 01: Set Bins passed!
+

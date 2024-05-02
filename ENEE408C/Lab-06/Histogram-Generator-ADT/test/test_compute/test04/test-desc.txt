@@ -1,0 +1,11 @@
+---------------------------------------------------------------------------
+Histogram Compute Test 04:
+---------------------------------------------------------------------------
+
+The purpose of this test was to check the basic functionality of the
+histogram compute test. For this test, we will test calling the
+"histogram compute" method on an invalid set of bins in which the maximum
+value is incorrect.
+
+Version: October 15, 2015
+

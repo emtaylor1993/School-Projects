@@ -1,0 +1,64 @@
+Tests started on:
+Tue Oct  6 14:55:24 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_array_list/test_elem_desc/test01
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_array_list/test_elem_desc/test01
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_array_list/test_insert/test01
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_array_list/test_insert/test01
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_array_list/test_insert/test02
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_array_list/test_insert/test02
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_array_list/test_insert/test03
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_array_list/test_insert/test03
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_array_list/test_insert/test04
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_array_list/test_insert/test04
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_array_list/test_insert/test05
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_array_list/test_insert/test05
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_array_list/test_length/test01
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_array_list/test_length/test01
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_array_list/test_length/test02
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_array_list/test_length/test02
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_array_list/test_list_desc/test01
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_array_list/test_list_desc/test01
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_students/test01
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/reference-code/list-adts/test/test_students/test01
+Tests completed on:
+Tue Oct  6 14:55:47 EDT 2015

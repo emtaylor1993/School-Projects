@@ -1,0 +1,14 @@
+
+Testing the "histgen_validate_bins" function...
+
+Bins to be validated: {1, 2, 3, 4, 5, 10, 11, 100, 101, 255}, min: 1, max: 255
+
+Method call complete...
+[1 - 2]
+[3 - 4]
+[5 - 10]
+[11 - 100]
+[101 - 255]
+
+Validate Bins passed!.
+

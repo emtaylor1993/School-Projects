@@ -1,0 +1,13 @@
+
+Testing the "histgen_set_bins" function...
+
+Bins to be set: {0, 2, 3, 4}
+
+Method call complete...
+
+Printing the bins...
+[0 - 2]
+[3 - 4]
+
+These bins are not valid.
+

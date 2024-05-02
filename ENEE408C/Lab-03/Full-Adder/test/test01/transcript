@@ -1,0 +1,4 @@
+# vsim -L ../../bin/ -do simulate-do -c -lic_plus -quiet -novopt testbench 
+# do simulate-do 
+estbench 
+# do simulate-do 

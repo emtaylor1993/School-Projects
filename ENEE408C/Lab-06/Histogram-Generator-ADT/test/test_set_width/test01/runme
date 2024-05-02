@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Script to run this test
+# Usage: runme [no arguments]
+
+../../util/runtest

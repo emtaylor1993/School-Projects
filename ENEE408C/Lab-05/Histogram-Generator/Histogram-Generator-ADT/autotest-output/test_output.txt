@@ -1,0 +1,94 @@
+Tests started on:
+Fri Oct  9 17:27:41 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_compute/test01
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_compute/test01
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_compute/test02
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_compute/test02
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_compute/test03
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_compute/test03
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_print_bins/test01
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_print_bins/test01
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_print_bins/test02
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_print_bins/test02
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_print_bins/test03
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_print_bins/test03
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_set_bins/test01
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_set_bins/test01
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_set_bins/test02
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_set_bins/test02
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_set_bins/test03
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_set_bins/test03
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_util_print/test01
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_util_print/test01
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_util_print/test02
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_util_print/test02
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_util_print/test03
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_util_print/test03
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_validate_bins/test01
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_validate_bins/test01
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_validate_bins/test02
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_validate_bins/test02
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_validate_bins/test03
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab05/c/histogram-generator/histgen-adt/test/test_validate_bins/test03
+Tests completed on:
+Fri Oct  9 17:27:52 EDT 2015

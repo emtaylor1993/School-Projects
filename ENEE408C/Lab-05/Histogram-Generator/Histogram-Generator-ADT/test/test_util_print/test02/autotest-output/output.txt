@@ -1,0 +1,16 @@
+
+Preparing to print histogram...
+
+Computing:
+Bin 1: 2
+Bin 2: 2
+Bin 3: 0
+
+Compute complete.
+
+Printing histogram:
+
+[1 - 2]:	2
+[3 - 4]:	2
+[5 - 6]:	0
+

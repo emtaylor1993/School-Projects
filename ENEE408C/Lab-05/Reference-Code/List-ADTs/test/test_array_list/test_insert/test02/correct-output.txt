@@ -1,0 +1,5 @@
+length after: 2
+displaying the list ...
+Element 0: 33
+Element 1: 0
+... finished displaying the list. 

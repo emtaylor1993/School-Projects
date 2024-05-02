@@ -1,0 +1,10 @@
+------------------------------------------------------------------------
+Histogram Get Stride Test 04:
+------------------------------------------------------------------------
+
+The purpose of this test was to check the basic functionality of the
+histogram get stride test. For this test, we will test calling the 
+"histogram_get_stride" after multiple set calls and storing the return
+values into an array. The array should match the output array given.
+
+Version: October 12, 2015

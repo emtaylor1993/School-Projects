@@ -1,0 +1,7 @@
+
+Testing the "histgen_set_max_bin_count" function...
+Value of max bin count before calling: 0.
+Method call complete...
+Value of max bin count after calling: 7.
+Test 03: Set Max Bin Count passed!
+

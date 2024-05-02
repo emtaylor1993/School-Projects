@@ -1,0 +1,7 @@
+Clock: 1, A: 1, B: 0, Output: 2
+Clock: 0, A: 1, B: 0, Output: 2
+Clock: 1, A: 1, B: 0, Output: 0
+Clock: 0, A: 1, B: 0, Output: 0
+Clock: 1, A: 1, B: 0, Output: 1
+Clock: 0, A: 1, B: 0, Output: 1
+Clock: 1, A: 1, B: 0, Output: 2

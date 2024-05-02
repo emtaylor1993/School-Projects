@@ -1,0 +1,12 @@
+Tests started on:
+Sat Sep 19 22:13:59 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab03/verilog/histogram-bin-count/test/test03
+Files ../correct-output.txt and output.txt differ
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab03/verilog/histogram-bin-count/test/test03
+Files ../expected-errors.txt and error_output.txt differ
+Tests completed on:
+Sat Sep 19 22:14:02 EDT 2015

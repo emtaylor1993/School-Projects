@@ -1,0 +1,40 @@
+Tests started on:
+Fri Sep 11 02:22:31 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab02/c/hist_2d/test/test01
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab02/c/hist_2d/test/test01
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab02/c/hist_2d/test/test02
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab02/c/hist_2d/test/test02
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab02/c/hist_2d/test/test03
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab02/c/hist_2d/test/test03
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab02/c/hist_2d/test/test04
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab02/c/hist_2d/test/test04
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab02/c/hist_2d/test/test05
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab02/c/hist_2d/test/test05
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab02/c/hist_2d/test/test06
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab02/c/hist_2d/test/test06
+Tests completed on:
+Fri Sep 11 02:22:33 EDT 2015

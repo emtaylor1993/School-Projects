@@ -1,0 +1,28 @@
+Tests started on:
+Thu Sep 24 15:55:42 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab04/verilog/bssdc/test/test01
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab04/verilog/bssdc/test/test01
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab04/verilog/bssdc/test/test02
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab04/verilog/bssdc/test/test02
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab04/verilog/bssdc/test/test03
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab04/verilog/bssdc/test/test03
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab04/verilog/bssdc/test/test04
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab04/verilog/bssdc/test/test04
+Tests completed on:
+Thu Sep 24 15:55:50 EDT 2015

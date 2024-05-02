@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------
+Histogram Print Bins Test 01:
+-------------------------------------------------------------------------
+
+The purpose of this test was to check the basic functionality of the
+histogram print bins test. For this test, we will test calling the 
+"histogram_print_bins" method once and see if it will print a simple
+set of bins.
+
+Version: 10/15/2015
+

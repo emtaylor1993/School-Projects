@@ -1,0 +1,12 @@
+Tests started on:
+Thu Oct 15 13:05:35 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab06/c/reference-code/list-adts/test/test_array_list/test_insert/test03
+Files ../correct-output.txt and output.txt differ
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab06/c/reference-code/list-adts/test/test_array_list/test_insert/test03
+Files ../expected-errors.txt and error_output.txt differ
+Tests completed on:
+Thu Oct 15 13:05:35 EDT 2015

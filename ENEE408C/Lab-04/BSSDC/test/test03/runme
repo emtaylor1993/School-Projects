@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Script to run this test
+# Usage: runme [no arguments]
+
+# [FIXME: complete this script, this is just a template]
+
+UXLIB=../../bin
+
+if [ -f out.txt ]; then
+	rm -r out.txt
+fi
+
+vsim -c -L "$UXLIB" -lic_plus -quiet -novopt -do simulate-do lab04_test > transcript
+cat out.txt

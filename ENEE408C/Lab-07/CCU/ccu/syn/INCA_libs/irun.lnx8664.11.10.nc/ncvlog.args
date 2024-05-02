@@ -1,0 +1,27 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-XLMODE
+./INCA_libs/irun.lnx8664.11.10.nc
+-RUNMODE
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/adder.v
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/ccu.v
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/counter.v
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/mux.v
+-VFILE
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/testbench.v
+-LINEDEBUG
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/adder.v
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/ccu.v
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/counter.v
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/mux.v
+/afs/glue.umd.edu/home/glue/e/t/etaylor5/home/enee408c_user/labs/lab08/verilog/ccu/syn/testbench.v
+-CDSLIB
+./INCA_libs/irun.lnx8664.11.10.nc/cdsrun.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.11.10.nc/hdlrun.var
+-UPDATE
+-XLLIBSTORE
+./INCA_libs/irun.lnx8664.11.10.nc/xllibs
+-ALLOWUNBOUND

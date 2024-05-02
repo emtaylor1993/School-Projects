@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Script to build the executable for this test
+# Usage: makeme [no arguments]
+
+# [FIXME: complete this script, this is just a template]
+
+# Script to build this test.	
+
+if ! [ -d work ]; then
+	vlib work
+	vmap work work
+fi
+
+vlog lab04_test.v

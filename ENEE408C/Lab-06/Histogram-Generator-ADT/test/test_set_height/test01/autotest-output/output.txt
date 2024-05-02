@@ -1,0 +1,7 @@
+
+Testing the "histgen_set_height" function...
+Value of height before calling: 0.
+Method call complete...
+Value of height after calling: 2.
+Test 01: Set Height passed!
+

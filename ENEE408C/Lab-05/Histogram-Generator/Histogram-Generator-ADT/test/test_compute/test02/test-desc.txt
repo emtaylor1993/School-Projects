@@ -1,0 +1,9 @@
+
+Histogram Compute Test02:
+
+The purpose of this test was to check the basic functionality of the histogram
+compute function. The test will try to place observations that are outside
+of the bin range into the bins. As you can see, those observations are not
+displayed and are kicked out.
+
+Version: 10/09/2015

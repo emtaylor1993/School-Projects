@@ -1,0 +1,11 @@
+Tests started on:
+Fri Sep 11 00:02:18 EDT 2015
+-----------------------------------------------------
+Test result for:
+/homes/etaylor5/enee408c_user/labs/lab02/c/hist_2d/test/test01
+Files ../correct-output.txt and output.txt differ
+-----------------------------------------------------
+Error comparison result for: 
+/homes/etaylor5/enee408c_user/labs/lab02/c/hist_2d/test/test01
+Tests completed on:
+Fri Sep 11 00:02:18 EDT 2015

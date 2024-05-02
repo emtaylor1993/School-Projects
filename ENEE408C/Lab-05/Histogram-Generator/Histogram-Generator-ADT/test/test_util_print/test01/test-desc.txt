@@ -1,0 +1,7 @@
+
+Histogram Util Print Test01:
+
+The purpose of this test was to check the basic functionality of the histogram
+util print function. This test will print out a simple result.
+
+Version: 10/09/2015

@@ -1,0 +1,10 @@
+-------------------------------------------------
+Histogram Set Height  Test 04:
+-------------------------------------------------
+
+The purpose of this test was the check the basic functionality of the
+histogram set height test. For this test, we will test calling the
+"histogram_set_height" method inside of control statements such as if
+else loops.
+
+Version: October, 12, 2015

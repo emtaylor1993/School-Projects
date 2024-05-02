@@ -1,0 +1,11 @@
+----------------------------------------------------------------------------
+Histogram Validate Bins Test 07:
+----------------------------------------------------------------------------
+
+The purpose of this test was to check the basic functionality of the
+histogram validate bins test. For this test, we will test calling the
+"histogram_validate_bins" method once and see if it will validate a
+set of bins that is invalid. Particularily, if there is a gap in the list  
+of bins.
+
+Version: October 15, 2015
