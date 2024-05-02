@@ -1,0 +1,13 @@
+# if (a >= b) print a else print b
+
+       rdint %eax        # reading a 
+       rdint %ebx        # reading b
+       rrmovl %eax, %ecx # making copy of %eax
+       subl %ebx, %ecx   # no longer overwriting %eax 
+       jge Equal
+       wrint %ebx        # else block
+       jmp EndIf
+Equal: wrint %eax        # true block
+EndIf: irmovl $10, %edx  # newline
+       wrch %edx
+       halt

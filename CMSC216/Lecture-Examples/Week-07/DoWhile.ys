@@ -1,0 +1,18 @@
+# print values between 1 and value provided    
+         rdint %eax         # loop limit
+         irmovl $1, %ebx    # iteration variable
+         irmovl $1, %ecx    # increment
+
+Loop:    wrint %ebx	        # writing value
+         irmovl $32, %edx   # blank character
+         wrch %edx          # priting blank character   
+
+         addl %ecx, %ebx    # incrementing by 1      
+         rrmovl %ebx, %edx  # making copy
+         subl %eax, %edx
+         jle  Loop          # jump back  
+
+EndLoop: irmovl $10, %edx   # newline character
+         wrch %edx             
+
+         halt

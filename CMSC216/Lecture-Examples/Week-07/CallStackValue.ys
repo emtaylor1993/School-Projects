@@ -1,0 +1,16 @@
+#
+# Prints stack top illustrating that the value in the stack top is the address 
+# of the instruction after the function call (examine .yo file)
+#
+
+		        irmovl $0x1000, %esp	# setting the stack pointer	
+
+		        call printStackTop    
+		        irmovl $10, %edx        # instruction located at address 11(0xb)
+		        wrch %edx
+                halt
+
+printStackTop:	mrmovl 0(%esp), %eax    # top of stack (ret address)
+		        wrint %eax              # address of irmovl above 11 (0xb)
+                ret
+

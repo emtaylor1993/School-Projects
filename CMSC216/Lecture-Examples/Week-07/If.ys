@@ -1,0 +1,14 @@
+# read a and b; if (a == b) prints 'Y' else prints 'N'
+
+       rdint %eax        # reading a
+       rdint %ebx        # reading b
+       subl %ebx, %eax   # we are overwriting %eax 
+       je Equal
+       irmovl $78, %ecx  # else block, 78 --> N
+       wrch %ecx
+       jmp EndIf
+Equal: irmovl $89, %ecx  # true block case, 89 --> Y
+       wrch %ecx
+EndIf: irmovl $10, %edx  # 10 --> newline
+       wrch %edx
+       halt

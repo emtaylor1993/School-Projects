@@ -1,0 +1,26 @@
+#
+# Computes the square of the provided number and prints the number
+# and the square (separated by -).  For example, if the user enters 
+# 4, 4-16* is generated (* marks end of the program).  
+# We use the stack to keep track of the original value provided 
+# so we can print it later on.  What happens if in the square function
+# we have to "pushl %eax" instead of one? 
+#
+	     irmovl $0x1000, %esp  # setting the stack pointer	
+
+	     call square           # calling the function
+         irmovl $42, %ecx      # printing * to represent end of program
+         wrch %ecx
+	     irmovl $10, %ecx      # new line
+	     wrch %ecx
+         halt
+
+square:  rdint %eax            # reading integer value 
+         pushl %eax            # saving %eax in the stack 
+	     multl %eax, %eax      # computing product
+         popl %ebx             # retrieving int value 
+         wrint %ebx
+	     irmovl $45, %ebx      # - symbol
+         wrch %ebx
+	     wrint %eax            # writing the product
+         ret                   # returning 

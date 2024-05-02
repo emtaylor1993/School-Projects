@@ -1,0 +1,29 @@
+#
+# Defining function that prints values and function that
+# that prints new line
+#
+
+
+	          irmovl $0x1000, %esp # setting the stack pointer	
+                
+	          call printValues
+	          call printNewLine
+              halt
+
+printValues:  rdint %eax         # loop limit
+              irmovl $1, %ebx    # iteration variable
+              irmovl $1, %ecx    # increment
+
+Loop:         wrint %ebx         # writing value
+              irmovl $32, %edx   # printing blank character
+              wrch %edx             
+
+              addl %ecx, %ebx    # incrementing by 1      
+              rrmovl %ebx, %edx  # making copy
+              subl %eax, %edx
+              jle  Loop          # jump back  
+	          ret
+
+printNewLine: irmovl $10, %edx 
+	          wrch %edx
+              ret

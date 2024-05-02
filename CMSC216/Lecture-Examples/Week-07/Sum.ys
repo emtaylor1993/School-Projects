@@ -1,0 +1,18 @@
+# computes sum of provided values until 0 is entered 
+# Try1: 3 2 0, Try2: 0
+
+	     rdint  %eax
+         irmovl $0,%edi    # consistent zero
+         irmovl $0,%esi    # sum = 0
+  	     addl   %edi,%eax
+         je     EndLoop
+
+Loop:    addl   %eax,%esi  # sum += n
+         rdint  %eax
+         addl   %edi,%eax
+         jne    Loop
+
+EndLoop: wrint  %esi
+         irmovl $10,%ebx
+         wrch   %ebx
+         halt 

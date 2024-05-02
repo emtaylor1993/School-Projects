@@ -1,0 +1,19 @@
+          rdint  %ecx        # scanf("%d", &n);
+          irmovl $1,%ebx     # f = 1;
+          irmovl $1,%eax     # i = 1;
+          rrmovl %eax,%edi   # tmp = i;
+          subl   %ecx,%edi   # tmp -= n;
+          jg     EndWhile    # if (tmp > 0) goto EndWhile;
+
+Loop:     multl  %eax,%ebx   # f *= i;
+          irmovl $1,%edi     # tmp = 1;
+          addl   %edi,%eax   # i += tmp;
+          rrmovl %eax,%edi   # tmp = i;
+          subl   %ecx,%edi   # tmp -= n;
+          jle    Loop        # if (tmp <= 0) goto Loop;
+
+EndWhile: wrint  %ebx        # printf("%d", f);
+          irmovl $10,%edi    # tmp = '\n';
+          wrch   %edi        # printf("%c", tmp);
+          halt               # return 0;
+

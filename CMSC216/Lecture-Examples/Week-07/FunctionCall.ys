@@ -1,0 +1,15 @@
+# 
+# Illustrates simple function call that prints letter A.
+#
+
+		        irmovl $0x1000, %esp	# setting the stack pointer	
+
+		        call print_letter_a     # calling the function
+		        call print_letter_a     # calling the function again
+                halt
+
+print_letter_a:	irmovl $65, %ebx        # character A
+		        wrch %ebx  
+                irmovl $10, %ebx
+                wrch %ebx
+                ret                     # notice the ret instruction

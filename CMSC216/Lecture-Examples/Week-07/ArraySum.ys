@@ -1,0 +1,34 @@
+# sums x number of elements from an array
+
+         irmovl $0, %eax     # has the sum
+         rdint %ebx          # how many elements to add
+         irmovl $0, %esi     # iteration variable
+         irmovl MyData, %edx # array start address
+
+         rrmovl %esi, %ecx   
+         subl %ebx, %ecx     
+         je EndLoop           
+                  
+Loop:    mrmovl 0(%edx), %ecx  # array element placed in register
+         addl %ecx, %eax       # adding value to accumulator
+         irmovl $4, %edi       # moving to next element
+         addl %edi, %edx
+         irmovl $1, %edi       # increasing count
+         addl %edi, %esi
+
+         rrmovl %esi, %ecx     #checking we are done
+         subl %ebx, %ecx
+         jne Loop
+
+EndLoop: wrint %eax
+         irmovl $10, %esi
+         wrch %esi
+	     halt
+
+        .align 4
+MyData: .long 10
+        .long 20     	      
+        .long 30 
+        .long 40 
+        .long 50 
+        .long 60 

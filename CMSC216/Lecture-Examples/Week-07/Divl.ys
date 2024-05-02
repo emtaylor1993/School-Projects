@@ -1,0 +1,10 @@
+irmovl $2,%eax   # a = 2
+irmovl $8,%ebx   # b = 8
+divl   %eax,%ebx # b = b / a
+wrint  %eax      # priting a
+irmovl $32,%ecx  # 32 == ' '
+wrch   %ecx      # printing space
+wrint  %ebx      # printing b
+irmovl $10,%ecx  # 10 == '\n'
+wrch   %ecx
+halt 

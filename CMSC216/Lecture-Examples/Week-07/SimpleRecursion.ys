@@ -1,0 +1,22 @@
+#
+# Prints values from n up to 1
+#
+
+main:    irmovl $0x1000, %esp
+         call   f
+         halt
+
+f:       mrmovl n, %ecx
+         irmovl $0, %eax
+         addl   %eax, %ecx
+         jle    EndIf
+         wrint  %ecx
+         irmovl $1, %eax
+         subl   %eax, %ecx
+         rmmovl %ecx, n
+         call   f
+EndIf:   ret
+
+         .align 4
+n:       .long 3
+

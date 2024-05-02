@@ -1,0 +1,22 @@
+# prints values from 1 up to including limit. Try with values: 5 and 0.
+
+	     rdint %eax             # loop limit
+         irmovl $1, %ebx    # iteration variable
+         irmovl $1, %ecx    # increment variable
+
+         rrmovl %ebx, %edx   
+         subl %eax, %edx
+         jg EndLoop 
+
+Loop:    wrint %ebx	        # writing value
+         irmovl $32, %esi   # printing blank character
+         wrch %esi             
+
+	     addl %ecx, %ebx    # incrementing by 1      
+         rrmovl %ebx, %edx   
+         subl %eax, %edx
+	     jle  Loop     
+
+EndLoop: irmovl $10, %ecx   # newline character
+         wrch %ecx             
+	     halt
