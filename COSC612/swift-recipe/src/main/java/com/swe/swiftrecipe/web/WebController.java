@@ -167,12 +167,30 @@ public class WebController {
         List<Recipe> recipes = recipeService.getAllRecipes();
         for (int i = 0; i < recipes.size(); i++) {
             if (formattedQuery.equals("Easy") || formattedQuery.equals("Medium") || formattedQuery.equals("Hard")) {
+                if (formattedQuery.equals("Easy")) {
+                    queryAttribute = "Beginner";
+                } else if (formattedQuery.equals("Medium")) {
+                    queryAttribute = "Intermediate";
+                } else if (formattedQuery.equals("Hard")) {
+                    queryAttribute = "Expert";
+                }
                 if (recipes.get(i).getDifficulty().equals(formattedQuery)) {
                     results.add(recipes.get(i));
                 }
             } else if (formattedQuery.contains("Dinner") || formattedQuery.contains("Lunch") || formattedQuery.contains("Snack") ||
                 formattedQuery.contains("Dessert") || formattedQuery.contains("Side") || formattedQuery.contains("Appetizer") ||
                 formattedQuery.contains("Beverage")) {
+                if (formattedQuery.equals("Snack")) {
+                    queryAttribute = "Snacks";
+                } else if (formattedQuery.equals("Dessert")) {
+                    queryAttribute = "Desserts";
+                } else if (formattedQuery.equals("Beverage")) {
+                    queryAttribute = "Beverages";
+                } else if (formattedQuery.equals("Side")) {
+                    queryAttribute = "Side Dishes";
+                } else if (formattedQuery.equals("Appetizer")) {
+                    queryAttribute = "Appetizers";
+                }
                 if (recipes.get(i).getMealType().contains(formattedQuery)) {
                     results.add(recipes.get(i));
                 }
