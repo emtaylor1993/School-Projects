@@ -1,6 +1,6 @@
 # COSC-612 - Semester Project - SwiftRecipe
 
-![image](https://github.com/emtaylor1993/COSC-612/assets/93065901/c6c912d9-abc6-4bba-b817-41f71711975a)
+![image](https://github.com/emtaylor1993/School-Projects/assets/93065901/2a771cb7-46e5-4255-b806-d1cbf6c3c2cc)
 
 # Team Members:
 - Sade Jn Baptiste
