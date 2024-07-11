@@ -12,9 +12,7 @@ async function setupNodeEvents(cypressOn, config) {
 module.exports = defineConfig({
   defaultCommandTimeout: 6000,
   env: {
-    url: "http://localhost:8080/login",
-    username: "etaylor5",
-    password: "demo5"
+    url: "http://localhost:8080/login"
   },
   retries: {
     runMode: 1
