@@ -1,0 +1,24 @@
+{
+  "name": "swift-recipe-automation",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emmanuel Taylor",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^13.13.0",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.0",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress-on-fix": "^1.0.3"
+  },
+  "@badeball/cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/integration/steps/*.js"
+  }
+}
