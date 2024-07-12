@@ -13,7 +13,7 @@ Feature: Logging Into SwiftRecipe Application
         Given User Visits SwiftRecipe Login Page
 
     # Scenario for successful logout.
-    @scenario_1.1.1 @logout
+    @scenario_1.1.1
     Scenario: Attempting Logout of the SwiftRecipe Application
         When User Navigates to Username Field and Types in "etaylor5"
         Then User Navigates to Password Field and Types in "demo5"
