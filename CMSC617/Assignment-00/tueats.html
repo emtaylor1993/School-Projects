@@ -1,0 +1,95 @@
+<!--
+ * TUEATS.HTML
+ *
+ * @author Emmanuel Taylor
+ *
+ * @description
+ *     View for TU Eats Screen
+-->
+
+<html>
+    <head>
+        <title>TUEats</title>
+        <link rel="stylesheet" type="text/css" href="tueats.css" />
+        <script>
+            function validate(form) {
+                password = form.password.value;
+                retype = form.retype.value;
+                referral = form.referral.value.toLowerCase();
+                username = form.username.value;
+
+                if (password != retype) {
+                    alert("ensure passwords match");
+                    return false;
+                } else if (referral == "tucis" || referral == "bogo" || referral == "eatgood") {
+                    validateReferral();
+                    return false;
+                } else if (username.length < 6) {
+                    alert("username must be at least 6 characters long");
+                    return false;
+                } else if (username.length > 24) {
+                    alert("username must be less than 24 characters long");
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+
+            function validateReferral() {
+                var referral = document.getElementById("referral").value.toLowerCase();
+                var error = document.getElementById("error");
+                error.innerHTML = "";
+                if (referral == "tucis" || referral == "bogo" || referral == "eatgood") {
+                    error.innerHTML = "This referral code is invalid"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <form id="form" method="GET" action="tueats_completed.html" onSubmit="return validate(this)">
+                <h1 id="tuheader">Welcome To TUEats</h1>
+                <h1>Sign Up</h1>
+                <h4>Username:</h4>
+                <input id="username" type="text" name="username" required />
+                <h4>Email:</h4>
+                <input id="email" type="text" name="email" required />
+                <h4>Referral Code:</h4>
+                <input id="referral" type="text" name="referral" onkeyup="validateReferral()"/><br />
+                <span id="error" style="color: red;"></span>
+                <h4>Password:</h4>
+                <input id="password" type="password" name="password" required />
+                <h4>Retype Password:</h4>
+                <input id="retype" type="password" name="retype" required />
+                <h4><input id="checkbox" type="checkbox" name="checkbox" />Sign up for our newsletter?</h4>
+                <input id="submit" type="submit" value="Submit" />
+            </form>
+            <table>
+                <caption>Menu is subject to change, please visit our main <a href="https://www.towson.edu">Towson Website</a> for more information</caption>
+                <tr>
+                    <td id="header"></td>
+                    <td id="header">Name</td>
+                    <td id="header">Price</td>
+                    <td id="header">Calories</td>
+                </tr>
+                <tr>
+                    <td>item 1</td>
+                    <td>Burger</td>
+                    <td>$8</td>
+                    <td>550</td>
+                </tr>
+                <tr>
+                    <td>item 2</td>
+                    <td>Mozzarella Sticks</td>
+                    <td>$7</td>
+                    <td rowspan="2">400</td>
+                </tr>
+                <tr>
+                    <td>item 3</td>
+                    <td>Fries</td>
+                    <td>$4</td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>

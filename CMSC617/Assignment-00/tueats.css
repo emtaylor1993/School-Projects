@@ -1,0 +1,30 @@
+/*
+ * TUEATS.CSS
+ *
+ * @author Emmanuel Taylor
+ *
+ * @description
+ *    Controls styling for tueats.html
+ */
+
+table {
+    width: 75%;
+    text-align: center;
+    background-color: #808080;
+}
+
+td {
+    border: 1px solid black;
+}
+
+#header {
+    font-weight: bold;
+}
+
+#tuheader {
+    color: #FFBB00;
+}
+
+a:hover {
+    color: #FFBB00;
+}
