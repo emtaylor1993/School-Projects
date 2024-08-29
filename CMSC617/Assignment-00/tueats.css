@@ -28,3 +28,7 @@ td {
 a:hover {
     color: #FFBB00;
 }
+
+div.image::before {
+    content:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_NRQmtddrjBKHFeWJlzl6j_aJAFMaV3w8SA&s);
+}
