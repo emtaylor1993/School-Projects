@@ -12,6 +12,41 @@
         <title>TUEats Completed</title>
     </head>
     <body>
+        <h1 id="welcome"></h1>
+        <ul><li><h3 id="username"></h3></li></ul>
+        <ul><li><h3 id="email"></h3></li></ul>
+        <ul><li><h3 id="referral"></h3></li></ul>
+        <ul><li><h3 id="password"></h3></li></ul>
+        <ul><li><h3 id="retype"></h3></li></ul>
+        <ul><li><h3 id="checkbox"></h3></li></ul>
+        <script>
+            const queryString = window.location.search;
+            const queryParameters = new URLSearchParams(queryString);
+            const username = queryParameters.get("username");
+            const email = queryParameters.get("email");
+            const referral = queryParameters.get("referral");
+            const password = queryParameters.get("password");
+            const retype = queryParameters.get("retype");
+            const checkbox = queryParameters.get("checkbox");
 
+            document.getElementById("welcome").innerHTML = "Hello: " + username;
+            document.getElementById("username").innerHTML = "username: " + username;
+            document.getElementById("email").innerHTML = "email: " + email;
+
+            if (referral != "") {
+                document.getElementById("referral").innerHTML = "referral: " + referral + " (free meal)";
+            } else {
+                document.getElementById("referral").innerHTML = "No referral code entered";
+            }
+
+            document.getElementById("password").innerHTML = "password: " + password;
+            document.getElementById("retype").innerHTML = "password verify: " + retype;
+
+            if (checkbox == "on") {
+                document.getElementById("checkbox").innerHTML = "checkbox: true";
+            } else {
+                document.getElementById("checkbox").innerHTML = "checkbox: false";
+            }
+        </script>
     </body>
 </html>
