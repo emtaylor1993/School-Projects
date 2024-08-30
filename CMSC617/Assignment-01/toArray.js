@@ -25,8 +25,8 @@ evenArray.forEach(function(element) {
 });
 
 /* Removing the last occurrence of the comma. */
-lastOccurence = arrayString.lastIndexOf(",");
-var finalArrayString = arrayString.substring(0, lastOccurence) + arrayString.substring(lastOccurence + 1);
+lastOccurrence = arrayString.lastIndexOf(",");
+const finalArrayString = arrayString.substring(0, lastOccurrence) + arrayString.substring(lastOccurrence + 1);
 
 console.log("The array contains: " + finalArrayString);
 console.log("The length of the array is: " + evenArray.length);

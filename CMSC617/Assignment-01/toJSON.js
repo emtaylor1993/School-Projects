@@ -9,22 +9,25 @@
  */
 
 const fs = require("fs");
-const buffer = fs.readFileSync("partOne.txt");
-var output = buffer.toString();
 
-if (process.argv.length < 3) {
-    console.log("There should be a minimum of three arguments.");
-} else if (output.split("\n").length < 3) {
-    console.log("There should be a mininum of three lines in the file.");
+if (process.argv.length != 3) {
+    console.log("There should be three arguments.");
 } else {
+    const buffer = fs.readFileSync(process.argv[2]);
+    const output = buffer.toString();
     const outputSplits = output.split("\n");
-    if (outputSplits.length == 3) {
-        const location = outputSplits.pop();
-        const lname = outputSplits.pop();
-        const fname = outputSplits.pop();
-        const jsonString = `{"fname": "${fname}", "lname": "${lname}", "location": "${location}", "other": "N/A"}`;
-        console.log(jsonString);
+    
+    if (outputSplits.length < 3) {
+        console.log("There should be a mininum of three lines in the file.");
     } else {
-        console.log(outputSplits.pop());
+        if (outputSplits.length == 3) {
+            const location = outputSplits.pop();
+            const lname = outputSplits.pop();
+            const fname = outputSplits.pop();
+            const jsonString = `{"fname": "${fname}", "lname": "${lname}", "location": "${location}", "other": "N/A"}`;
+            console.log(jsonString);
+        } else {
+            console.log(outputSplits.pop());
+        }
     }
 }
