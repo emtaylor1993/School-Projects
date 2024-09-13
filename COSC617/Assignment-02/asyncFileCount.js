@@ -15,7 +15,7 @@ const fs = require("fs");
 const path = require("path");
 
 if (process.argv.length != 4) {
-    console.log("There should be at four arguments.")
+    console.log("There should be at four arguments.");
 } else {
     fs.readdir(process.argv[2], "utf8", (err, data) => {
         if (err) {
@@ -31,5 +31,5 @@ if (process.argv.length != 4) {
         });
 
         console.log(filteredFiles);
-    })
+    });
 }

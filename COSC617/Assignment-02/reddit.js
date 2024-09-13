@@ -19,17 +19,17 @@ console.log("Part 1:");
 const usernames = _.map(data, "username");
 console.log(usernames);
 
-console.log("---------------")
+console.log("---------------");
 console.log("Part 2:");
 const groupedNames = _.groupBy(data, "username");
 console.log(groupedNames);
 
-console.log("---------------")
+console.log("---------------");
 console.log("Part 3:");
 const uniqueNames = _.uniq(_.map(data, "username"));
 console.log(uniqueNames);
 
-console.log("---------------")
+console.log("---------------");
 console.log("Part 4:");
 const sortedNames = _.orderBy(data, "username", ["asc"]);
 console.log(sortedNames);
