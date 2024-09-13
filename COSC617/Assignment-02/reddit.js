@@ -4,8 +4,8 @@
  * @author Emmanuel Taylor
  * 
  * @description
- *    This file will read the contents of a directory, and return
- *    the number of files present of a certain extension.
+ *    This file will test the student's ability to use Node's
+ *    lodash dependency.
  * 
  * @usage
  *    node reddit.js <filename>
