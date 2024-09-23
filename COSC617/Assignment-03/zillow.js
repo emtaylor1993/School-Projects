@@ -45,7 +45,7 @@ if (process.argv.length != 3) {
         if (!req.query.usd) {
             res.status(404).json({msg: "Request is incorrect."});
         } else {
-            const filteredPrices = data.filter(filter => filter.price <= req.query.price);
+            const filteredPrices = data.filter(filter => filter.price <= req.query.usd);
             res.status(200).json({houses: filteredPrices});
         }
     });
