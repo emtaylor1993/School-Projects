@@ -4,8 +4,9 @@
  * @author Emmanuel Taylor
  * 
  * @description
- *    This file will serve JSON data when a GET request is received on
- *    three separate endpoints.
+ *    This file will serve as a web scraper that will look for up to the top
+ *    25 hip-hop songs and display songs from an artist(s) that the user enters
+ *    via the command line.
  * 
  * @usage
  *    node artists.js Tupac Eminem
