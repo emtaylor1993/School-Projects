@@ -69,6 +69,7 @@ if (process.argv.length > 2) {
                 });
 
                 if (combinedArray.length > 0) {
+                    // Format Combined Array to include HTML content.
                     const formattedArray = combinedArray.map(item => {
                         const [artist, title] = item.split(":");
                         return `<li>${artist}: <i>${title.trim()}</i></li>`;
