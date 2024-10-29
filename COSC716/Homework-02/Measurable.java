@@ -4,7 +4,7 @@
  * @author Emmanuel Taylor
  * 
  * @description
- *      This abstract class represents a Measurable object that returns
+ *      This interface class represents a Measurable object that returns
  *      the measurements of various objects.
  * 
  * @packages
