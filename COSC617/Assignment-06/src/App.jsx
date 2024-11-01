@@ -16,6 +16,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Article from './Article';
+import './App.css';
 
 function App() {
     const [articles, setArticles] = useState([]);
@@ -34,7 +35,7 @@ function App() {
     // Loops through each article in the list of articles and displays its information.
     return (
         <div className="App">
-            <h1>Barstool Sports Archive</h1>
+            <h1><center>Barstool Archive</center></h1>
             <div className="article-list">
                 {articles.map((article, index) => (
                     <Article key={index} article={article} />
