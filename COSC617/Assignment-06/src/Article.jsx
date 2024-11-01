@@ -1,3 +1,14 @@
+/**
+ * Article.js
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This file will serve as a component module for each Article. It will display information
+ *    about each article such as the title, thumbnail, author, author's avatar and the number
+ *    of comments on each article.
+ */
+
 import React from 'react';
 
 // Article component to display each article's details
@@ -10,7 +21,7 @@ function Article({ article }) {
         thumbnail,
     } = article;
 
-    // Construct full thumbnail URL
+    // Construct full thumbnail URL.
     const thumbnailUrl = thumbnail?.location + thumbnail?.images?.small;
 
     return (
