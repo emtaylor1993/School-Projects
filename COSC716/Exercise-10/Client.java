@@ -2,6 +2,8 @@
  * CLIENT
  * 
  * @author Emmanuel Taylor
+ * @author Ata Tangban
+ * @author Vincent Gruse
  * 
  * @description
  *      This class is responsible for configuring and running the application

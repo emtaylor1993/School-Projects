@@ -2,6 +2,8 @@
  * BUTTON
  * 
  * @author Emmanuel Taylor
+ * @author Ata Tangban
+ * @author Vincent Gruse
  * 
  * @description
  *      This class acts as an interface that defines two methods: render()

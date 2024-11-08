@@ -2,6 +2,8 @@
  * WINDOWS BUTTON
  * 
  * @author Emmanuel Taylor
+ * @author Ata Tangban
+ * @author Vincent Gruse
  * 
  * @description
  *      This class is a concrete implementation of the Button interface. It

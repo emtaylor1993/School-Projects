@@ -2,6 +2,8 @@
  * DIALOG
  * 
  * @author Emmanuel Taylor
+ * @author Ata Tangban
+ * @author Vincent Gruse
  * 
  * @description
  *      This class acts as the creator in the Factory Design Pattern. It will
