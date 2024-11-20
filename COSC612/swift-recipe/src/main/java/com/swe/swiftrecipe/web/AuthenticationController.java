@@ -1,3 +1,22 @@
+/**
+ * SWIFTRECIPE AUTHENTICATION CONTROLLER CLASS
+ *
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This class ensures that only authenticated users can receive access
+ *    tokens. It checks for valid credentials before assigning a JWT to the client.
+ * 
+ * @packages
+ *    Java Extensions Servlet (HttpServletRequest)
+ *    Spring Framework Beans Factory Annotation (Autowired)
+ *    Spring Framework Security Authentication (AuthenticationManager, BadCredentialsException, UsernamePasswordAuthenticationToken)
+ *    Spring Framework Security Core (Authentication, SecurityContextHolder)
+ *    Spring Framework Web Bind Annotation (PostMapping, RequestMapping, RequestParam, RestController)
+ *    Spring Framework HTTP (HttpHeaders, HttpStatus)
+ *    SwiftRecipe Utilities (JWTUtility)
+ */
+
 package com.swe.swiftrecipe.web;
 
 import javax.servlet.http.HttpServletRequest;
@@ -7,12 +26,14 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import com.swe.swiftrecipe.utilities.JWTUtility;
-import org.springframework.web.bind.annotation.PostMapping;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -25,7 +46,7 @@ public class AuthenticationController {
     JWTUtility jwtUtility;
 
     @PostMapping("/authenticate")
-    public ModelAndView authenticate(
+    public ResponseEntity<?> authenticate(
         @RequestParam("username") String username, @RequestParam("password") String password, HttpServletRequest request
     ) {
         try {
@@ -35,12 +56,14 @@ public class AuthenticationController {
 
             SecurityContextHolder.getContext().setAuthentication(authentication);
             String token = jwtUtility.generateToken(username);
-
-            ModelAndView modelAndView = new ModelAndView("redirect:/");
-            request.getSession().setAttribute("JWT_TOKEN", token);
-            return modelAndView;
+            HttpHeaders headers = new HttpHeaders();
+            headers.add("Location", "/");
+            headers.add("Authorization", "Bearer " + token);
+            return ResponseEntity.status(HttpStatus.FOUND).headers(headers).build();
         } catch (BadCredentialsException e) {
-            return new ModelAndView("redirect:/login?error");
+            HttpHeaders headers = new HttpHeaders();
+            headers.add("Location", "/login?error");
+            return ResponseEntity.status(HttpStatus.FOUND).headers(headers).build();
         }
     }
 

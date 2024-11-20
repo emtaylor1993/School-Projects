@@ -17,6 +17,7 @@
  *    Java Utilities (ArrayList, Arrays, Comparator, List)
  *    Java Extensions Validation (Valid)
  *    Spring Framework Beans Factory Annotation (Autowired)
+ *    Spring Framework Security Core (Authentication, SecurityContextHolder, UserDetails)
  *    Spring Framework Security Crypto Password (PasswordEncoder)
  *    Spring Framework Stereotype (Controller)
  *    Spring Framework UI (Model)
@@ -37,6 +38,9 @@ import java.util.Comparator;
 import java.util.List;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -96,6 +100,14 @@ public class WebController {
      */
     @GetMapping("/")
     public String getDashboard(Model model) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String username;
+        if (authentication.getPrincipal() instanceof UserDetails) {
+            username = ((UserDetails) authentication.getPrincipal()).getUsername();
+        } else {
+            username = authentication.getPrincipal().toString();
+        }
+        model.addAttribute("username", username);
         model.addAttribute("recipes", recipeService.getAllRecipes());
         return "dashboard";
     }

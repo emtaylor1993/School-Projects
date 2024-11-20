@@ -31,7 +31,7 @@
             </div>
         </div>
         <br /><br />
-        <center><h1>Welcome <text style="color: #3366FF">[[${#httpServletRequest.remoteUser}]]</text>, View Our Available Recipes</h1></center>
+        <center><h1>Welcome <text style="color: #3366FF" th:text="${username}"></text>, View Our Available Recipes</h1></center>
         <div class="wrapper" style="display: flex;">
             <div class="row" id="row">
                 <div class="card" id="card" th:each="recipe: ${recipes}" style="display: none;">
