@@ -13,10 +13,13 @@
  * @packages
  *    Spring Framework Beans Factory Annotation (Autowired)
  *    Spring Framework Context Annotation (Bean, Configuration)
+ *    Spring Framework Security Authentication (AuthenticationManager, AuthenticationConfiguration)
  *    Spring Framework Security Configuration Annotation Web Builders (HttpSecurity)
  *    Spring Framework Security Configuration Annotation Web Configuration (EnableWebSecurity)
  *    Spring Framework Security Web (SecurityFilterChain)
+ *    Spring Framework Security Web Authentication (UsernamePasswordAuthenticationFilter)
  *    Spring Framework Security Web Utilities Matcher (AntPathRequestMatcher)
+ *    SwiftRecipe Utilities (JWTAuthenticationFilter, JWTUtility)
  */
 
 package com.swe.swiftrecipe.security;
@@ -24,17 +27,28 @@ package com.swe.swiftrecipe.security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import com.swe.swiftrecipe.utilities.JWTAuthenticationFilter;
+import com.swe.swiftrecipe.utilities.JWTUtility;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration {
     
     @Autowired
+    JWTUtility jwtUtility;
+    
+    @Autowired
     CustomUserDetailsService customUserDetailsService;
+
+    @Autowired
+    JWTAuthenticationFilter jwtAuthenticationFilter;
 
     /**
      * Configures the security settings for this web application
@@ -54,8 +68,10 @@ public class SecurityConfiguration {
                 .antMatchers("/signupUser").permitAll()
                 .antMatchers("/reset").permitAll()
                 .antMatchers("/resetPassword").permitAll()
+                .antMatchers("/api/auth/authenticate").permitAll()
                 .antMatchers("/images/*.png", "/*.js", "/*.css").permitAll()
                 .anyRequest().authenticated())
+            .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
             .formLogin(form -> form.loginPage("/login").permitAll())
             .userDetailsService(customUserDetailsService)
             .headers(headers -> headers.frameOptions().sameOrigin())
@@ -64,5 +80,11 @@ public class SecurityConfiguration {
                 .clearAuthentication(true)
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout")).permitAll())
             .build();
+    }
+
+    @Bean
+    AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration)
+            throws Exception {
+        return authenticationConfiguration.getAuthenticationManager();
     }
 }
