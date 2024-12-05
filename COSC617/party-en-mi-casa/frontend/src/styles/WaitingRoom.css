@@ -1,0 +1,185 @@
+/**
+ * WAITING ROOM STYLING
+ * 
+ * @author Andy Nguyen
+ * 
+ * @description
+ *    This file contains styling for the Waiting Room page, ensuring a
+ *    visually cohesive design and responsive layout. The styles focus on
+ *    displaying the room code, participant list, and overall page structure.
+ */
+
+@import url("App.css");
+
+.waiting-room {
+  --box-border-width: 0.5vw;
+  --avatar-size: 100px;
+  --room-code-size: 8vw;
+  --heading-size: 2vw;
+  --username-size: 1.5rem;
+  
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.waiting-room-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--amber);
+}
+
+.eight-bit-box {
+  flex: 1;
+  height: 60vh;
+  margin: 3rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+  background-color: var(--white);
+  border: var(--box-border-width) solid #000;
+  box-shadow: var(--box-border-width) var(--box-border-width) #000;
+  
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.code-box {
+  color: black;
+}
+
+.room-code {
+  margin: auto;
+  font-size: var(--room-code-size);
+  font-weight: 100;
+  color: var(--pink);
+}
+
+.fiesteros-box {
+  background-color: var(--teal);
+  color: var(--white);
+}
+
+.fiesteros-list {
+  list-style: none;
+  padding: 2rem;
+  margin: 0;
+}
+
+.fiestero-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 2rem;
+  font-size: var(--username-size);
+}
+
+.fiestero-avatar {
+  min-width: var(--avatar-size);
+  min-height: var(--avatar-size);
+  border: 3px solid var(--white);
+  overflow: hidden;
+}
+
+.user-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h2 {
+  font-size: var(--heading-size);
+  align-self: center;
+  font-size: var(--heading-size);
+}
+
+.fiestero-username {
+  font-size: var(--username-size);
+  color: var(--dark);
+}
+
+.QR-code {
+  align-self: center;
+}
+
+.error-message {
+  color: var(--error);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media screen and (max-width: 1024px) {
+  .waiting-room-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .waiting-room .header,
+  .waiting-room .footer {
+    display: none;
+  }
+
+  .eight-bit-box {
+    width: 100%;
+    margin: 0.5rem 0;
+    height: auto;
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 8.5vw;
+  }
+
+  .room-code {
+    font-size: 10vw;
+    font-weight: bold;
+  }
+
+  .fiesteros-box {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .fiesteros-list {
+    font-size: 4vw;
+    width: 100%;
+  }
+
+  .fiestero-item {
+    font-size: 3vw;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    width: 90%;
+  }
+
+  .fiestero-avatar {
+    width: 8vw;
+    height: 8vw;
+    margin-right: 10px;
+  }
+
+  .fiestero-username {
+    font-size: 1rem;
+    color: var(--dark);
+  }
+  
+  .user-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .QR-code {
+    width: 50vw;
+    height: 50vw;
+  }
+}
