@@ -61,7 +61,7 @@
 }
 
 .button-yellow:hover {
-  background-color: var(--amber);
+  background-color: var(--orange);
 }
 
 .button-pink {
@@ -70,7 +70,7 @@
 }
 
 .button-pink:hover {
-  background-color: var(--pink);
+  background-color: var(--orange);
 }
 
 .button-blue {
@@ -79,5 +79,5 @@
 }
 
 .button-blue:hover {
-  background-color: var(--light-blue);
+  background-color: var(--orange);
 }

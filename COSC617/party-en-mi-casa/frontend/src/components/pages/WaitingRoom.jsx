@@ -179,7 +179,7 @@ const WaitingRoom = () => {
 
   return (
     <div className="waiting-room">
-      <Header title="Waiting Room" />
+      <Header title="WAITING ROOM..." />
       {error && <div className="error-message">{error}</div>}
       <div className="waiting-room-container">
         <div className="code-box eight-bit-box">

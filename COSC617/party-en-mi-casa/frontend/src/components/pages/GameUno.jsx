@@ -262,7 +262,7 @@ const GameUno = () => {
 
   return (
     <div className="gameuno-container">
-      <Header title="Game Uno" />
+      <Header title="GAME UNO: TRIVIA" />
       <div className="timer">
         {timeRemaining}s
         <RiTimerFlashLine 

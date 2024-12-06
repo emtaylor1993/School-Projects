@@ -14,6 +14,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import PixelArtConverter from "../PixelArtConverter";
+import Footer from "../Footer.jsx";
 import "../../styles/Signup.css";
 
 const Signup = () => {
@@ -95,7 +96,6 @@ const Signup = () => {
 
   return (
     <div className="signup-container">
-      <h1>Signup</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label>Username:</label>
@@ -129,11 +129,16 @@ const Signup = () => {
           <PixelArtConverter onImageConverted={handleImageConverted} />
         </div>
         {error && <p style={{ color: "red" }}>{error}</p>}
-        <button type="submit">Create Account</button>
+        <button type="submit">CREATE ACCOUNT</button>
         <p>
-          Already have an account? <a href="/login">Login</a>
+          Already have an account? <a href="/">Login</a>
         </p>
       </form>
+      <Footer>
+        <p style={{ paddingLeft: "2rem" }}>
+          partyenmi.casa created as course work for COSC617 at Towson University
+        </p>
+      </Footer>
     </div>
   );
 };

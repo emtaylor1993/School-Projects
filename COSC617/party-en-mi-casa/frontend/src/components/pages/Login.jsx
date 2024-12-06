@@ -12,6 +12,7 @@
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Footer from "../Footer.jsx";
 import "../../styles/Login.css";
 import "../../styles/App.css";
 
@@ -60,7 +61,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <h1>Login</h1>
+      <div className="flashing-text">Party En Mi Casa</div>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="username">Username:</label>
@@ -84,9 +85,14 @@ const Login = () => {
           />
         </div>
         {errorMessage && <p className="error-message">{errorMessage}</p>}
-        <button type="submit">Login</button>
-        <button type="button" onClick={() => navigate("/signup")}>Create an Account</button>
+        <button type="submit">LOGIN</button>
+        <button type="button" onClick={() => navigate("/signup")}>CREATE AN ACCOUNT</button>
       </form>
+      <Footer>
+        <p style={{ paddingLeft: "2rem" }}>
+          partyenmi.casa created as course work for COSC617 at Towson University
+        </p>
+      </Footer>
     </div>
   );
 };

@@ -32,6 +32,7 @@
 
 .user-greeting {
   display: flex;
+  font-size: 15rem;
   align-items: center;
   gap: 1vw;
 }
@@ -46,14 +47,20 @@
 }
 
 .logout-button {
-  border: none;
-  border-radius: 50px;
+  width: 150px;
+  border: 5px solid #000;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.1s;
+  box-shadow: 3px 3px #000;
   background-color: var(--amber);
-  margin-right: 30px;
 }
 
 .join-room-button {
-  border: 3px solid #000;
+  width: 150px;
+  border: 5px solid #000;
   border-radius: 0;
   text-transform: uppercase;
   font-weight: bold;
@@ -63,20 +70,14 @@
   background-color: var(--pink);
 }
 
-.logout-button:hover {
-  background-color: var(--orange);
-}
-
 .join-room-button:active {
   box-shadow: 0 0 #000;
   transform: translate(0.25vw, 0.25vw);
   outline: none;
 }
 
-.join-room-button:hover {
-  color: #000;
-  outline: none;
-  border-color: black;
+.join-room-button:hover, .logout-button:hover {
+  background-color: var(--orange);
   animation: bounce 0.3s;
 }
 

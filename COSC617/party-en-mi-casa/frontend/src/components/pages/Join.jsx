@@ -12,6 +12,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../Header.jsx";
+import Footer from "../Footer.jsx";
 import "../../styles/Join.css";
 
 const API_BASE_URL = "http://localhost:3002/api";
@@ -106,7 +107,7 @@ const Join = () => {
 
   return (
     <div className="join-container">
-      <Header title="Join a Room" />
+      <Header title="JOIN A ROOM!" />
       <form onSubmit={handleSubmit} className="join-form">
         <div className="form-group">
           <label>Room Code:</label>
@@ -132,9 +133,14 @@ const Join = () => {
         )}
         
         <button className="join-button" type="submit">
-          Join Room
+          JOIN ROOM
         </button>
       </form>
+      <Footer>
+        <p style={{ paddingLeft: "2rem" }}>
+          partyenmi.casa created as course work for COSC617 at Towson University
+        </p>
+      </Footer>
     </div>
   );
 };

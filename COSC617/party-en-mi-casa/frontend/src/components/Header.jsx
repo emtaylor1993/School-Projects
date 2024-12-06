@@ -85,10 +85,10 @@ const Header = ({ title }) => {
       <div className="user-greeting">
         {user && <span className="user-name">Hello, {user}</span>}
         <button className="join-room-button" onClick={handleJoin}>
-          Join
+          JOIN
         </button>
         <button className="logout-button" onClick={handleLogout}>
-          Logout
+          LOGOUT
         </button>
       </div>
     </header>
