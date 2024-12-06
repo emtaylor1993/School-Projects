@@ -110,7 +110,7 @@ const ResultsRoom = () => {
 
   return (
     <div className="results-container">
-      <Header title="Game Uno Results" />
+      <Header title="RESULTS" />
 
       <div className="results-body">
         <div className="podium-section">

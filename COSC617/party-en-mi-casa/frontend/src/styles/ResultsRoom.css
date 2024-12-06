@@ -11,6 +11,24 @@
 
 @import url("App.css");
 
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-4px); /* Move up */
+  }
+  50% {
+    transform: translateY(0); /* Move back to original */
+  }
+  70% {
+    transform: translateY(-2px); /* Move slightly up */
+  }
+  100% {
+    transform: translateY(0); /* End at original position */
+  }
+}
+
 .results-container {
   display: flex;
   flex-direction: column;
@@ -246,8 +264,8 @@ h2 {
 }
 
 .toggle-button:hover {
-  transform: translate(0.15vw, 0.15vh);
-  box-shadow: 0.35vw 0.35vw #000;
+  background: var(--orange);
+  animation: bounce 0.3s;
 }
 
 .player-avatar {
