@@ -27,12 +27,11 @@
   font-size: 2rem;
   color: #000;
   margin: 0;
-  /* border: 0; */
 }
 
 .user-greeting {
   display: flex;
-  font-size: 15rem;
+  font-size: 2rem;
   align-items: center;
   gap: 1vw;
 }
@@ -43,7 +42,8 @@
   padding: 2vh;
   margin: 1vh 1vw;
   width: auto;
-  font-size: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .logout-button {
@@ -83,8 +83,9 @@
 
 .user-name {
   color: #000;
-  font-size: 1rem;
+  font-size: 2rem;
   margin-right: 1vw;
+  font-weight: bold;
 }
 
 .header-left {
@@ -94,8 +95,8 @@
 }
 
 .header-icon {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
 }
 

@@ -83,7 +83,7 @@ const Header = ({ title }) => {
         <h1 className="header-title">{title}</h1>
       </div>
       <div className="user-greeting">
-        {user && <span className="user-name">Hello, {user}</span>}
+        {user && <span className="user-name">HELLO, {user}</span>}
         <button className="join-room-button" onClick={handleJoin}>
           JOIN
         </button>

@@ -26,7 +26,7 @@ const ComingSoon = () => {
       <main className="coming-soon-body">
         <div className="coming-soon-content">
           <GiConsoleController size={120} className="construction-icon" />
-          <h1>Game Coming Soon!</h1>
+          <h1>UNDER CONSTRUCTION</h1>
           <button className="back-button-home" onClick={() => navigate("/home")}>
             RETURN HOME
           </button>
