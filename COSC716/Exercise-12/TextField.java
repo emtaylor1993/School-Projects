@@ -1,3 +1,17 @@
+/**
+ * TEXT FIELD CLASS
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *      This class represents a concrete implementation of the Widget interface.
+ *      It consists of a simple text field widget with a specified width and
+ *      height.
+ * 
+ * @packages
+ *      None
+ */
+
 public class TextField implements Widget {
     private int width;
     private int height;
