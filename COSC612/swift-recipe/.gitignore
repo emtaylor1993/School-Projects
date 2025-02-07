@@ -5,6 +5,7 @@ target/
 !**/src/test/**/target/
 src/test/resources/node_modules
 src/test/resources/cypress/reports
+src/test/resources/cypress/screenshots
 
 ### STS ###
 .apt_generated
