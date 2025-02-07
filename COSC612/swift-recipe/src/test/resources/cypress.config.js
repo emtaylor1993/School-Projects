@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
 const browserify = require("@badeball/cypress-cucumber-preprocessor/browserify");
+const path = require("path");
 
 async function setupNodeEvents(cypressOn, config) {
   const on = require("cypress-on-fix")(cypressOn)
@@ -21,6 +22,14 @@ module.exports = defineConfig({
     setupNodeEvents,
     viewportWidth: 2560,
     viewportHeight: 1440,
-    specPattern: "cypress/integration/features/*.feature"
+    specPattern: "cypress/integration/features/*.feature",
+    reporter: "mochawesome",
+    reporterOptions: {
+      reportDir: "cypress/reports",
+      overwrite: false,
+      html: true,
+      json: true,
+      timestamp: "mmddyyyy_HHMMss"
+    },
   },
 });
