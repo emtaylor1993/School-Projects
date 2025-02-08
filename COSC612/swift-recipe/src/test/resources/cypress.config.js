@@ -31,5 +31,9 @@ module.exports = defineConfig({
       json: true,
       timestamp: "mmddyyyy_HHMMss"
     },
+    video: true,
+    videoCompression: 32,
+    videoUploadOnPasses: false,
+    videosFolder: "cypress/videos"
   },
 });
