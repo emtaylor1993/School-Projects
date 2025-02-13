@@ -9,8 +9,10 @@ Projects from my undergraduate courses at University of Maryland, College Park a
 - CMSC414 - Computer and Network Security
 - COSC578 - Database Management Systems I
 - COSC600 - Advanced Algorithms and Data Structures
+- COSC603 - Software Testing & Maintenance
 - COSC612 - Software Engineering I
 - COSC650 - Computer Networks
+- COSC716 - Object-Oriented Methodologies
 - ENEE222 - Elements of Discrete Signal Analysis
 - ENEE245 - Digital Circuits and Systems Lab
 - ENEE350 - Digital Computer Organization
