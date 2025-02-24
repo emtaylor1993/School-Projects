@@ -12,6 +12,7 @@ Projects from my undergraduate courses at University of Maryland, College Park a
 - COSC603 - Software Testing & Maintenance
 - COSC612 - Software Engineering I
 - COSC650 - Computer Networks
+- COSC710 - Social Networks Analysis
 - COSC716 - Object-Oriented Methodologies
 - ENEE222 - Elements of Discrete Signal Analysis
 - ENEE245 - Digital Circuits and Systems Lab
