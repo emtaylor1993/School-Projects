@@ -1,17 +1,20 @@
 """
+build_user_profiles.py
+
 This script builds a user profile for each of the top 500 most voted users. It
 gathers their ideas and comments, combines them into a single document per user,
 uses TF-IDF vectorization and saves the results into a matrix.
 
 Author:        E. Taylor
 Date Created:  April 30, 2025
-Date Modified: April 30, 2025
+Date Modified: May 13, 2025
 Dependencies:  joblib, numpy, pandas, pathlib, sklearn
 """
 
 import joblib
 import numpy as np
 import pandas as pd
+
 from pathlib import Path
 from sklearn.feature_extraction.text import TfidfVectorizer
 

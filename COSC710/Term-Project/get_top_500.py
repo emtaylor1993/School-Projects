@@ -1,15 +1,18 @@
 """
+get_top_500.py
+
 This script processes the suggestions CSV to identify the top 500 voted
 users for their ideas. It will output a CSV containing these users and
 vote counts.
 
 Author:        E. Taylor
 Date Created:  April 30, 2025
-Date Modified: April 30, 2025
+Date Modified: May 13, 2025
 Dependencies:  pandas, pathlib
 """
 
 import pandas as pd
+
 from pathlib import Path
 
 OUTPUT_DIR = Path("outputs")

@@ -4,12 +4,13 @@ based on their built user profile.
 
 Author:        E. Taylor
 Date Created:  April 30, 2025
-Date Modified: April 30, 2025
-Dependencies:  re, pandas, pathlib
+Date Modified: May 13, 2025
+Dependencies:  numpy, pandas, pathlib, sklearn
 """
 
 import numpy as np
 import pandas as pd
+
 from pathlib import Path
 from sklearn.metrics.pairwise import cosine_similarity
 

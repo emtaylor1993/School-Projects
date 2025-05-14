@@ -1,16 +1,19 @@
 """
+parse_sql.py
+
 This script parse the SQL INSERT statements from the sb_ideaforce files and saves them
 as CSVs to the outputs/ directory.
 
 Author:        E. Taylor
 Date Created:  April 30, 2025
 Date Modified: April 30, 2025
-Dependencies:  re, pandas, pathlib
+Dependencies:  csv, re, pandas, io, pathlib
 """
 
-import re
 import csv
+import re
 import pandas as pd
+
 from io import StringIO
 from pathlib import Path
 
@@ -51,8 +54,11 @@ def extract_insert_rows(file_path, table_name, expected_columns):
 
     return all_rows
 
-
 def parse_and_export():
+    """
+    Parses the suggestions and comments from their SQL files given ih the sb_ideaforce.zip
+    and exports them to CSVs for later processing in the pipeline.
+    """
     print("[INFO] Parsing SQL Files.")
 
     suggestions = extract_insert_rows(
@@ -82,7 +88,6 @@ def parse_and_export():
         print(f"[INFO] Parsed {len(comments)} Comments.")
     else:
         print("[ERROR] No valid comments parsed.")
-
 
 if __name__ == "__main__":
     parse_and_export()

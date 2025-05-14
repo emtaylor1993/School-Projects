@@ -3,16 +3,24 @@ merge_recommendations.py
 
 Combines friend and drink recommendation CSVs into one unified JSON file.
 Output: outputs/user_recommendations.json
+
+Author:        E. Taylor
+Date Created:  April 30, 2025
+Date Modified: May 13, 2025
+Dependencies:  json, pandas, pathlib
 """
 
-import pandas as pd
 import json
+import pandas as pd
+
 from pathlib import Path
 
 OUTPUT_DIR = Path("outputs")
 
 def merge_recommendations(friend_csv, drink_csv, output_json):
-    # Load both CSVs
+    """
+    Merges friend and drink recommendation CSVs into a single JSON file.
+    """
     friends = pd.read_csv(friend_csv)
     drinks = pd.read_csv(drink_csv)
 
@@ -31,7 +39,7 @@ def merge_recommendations(friend_csv, drink_csv, output_json):
     with open(output_json, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2)
 
-    print(f"✅ Saved merged recommendations to {output_json}")
+    print(f"[INFO] Saved merged recommendations to {output_json}")
 
 if __name__ == "__main__":
     merge_recommendations(
